@@ -1,0 +1,2 @@
+# hos.sh
+My site
