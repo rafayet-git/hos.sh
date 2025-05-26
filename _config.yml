@@ -19,8 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Rafayet Hossain
-description: Personal website
+description: My personal website
 url: "https://hos.sh" # the base hostname & protocol for your site, e.g. http://example.com
+timezone: America/New_York
 
 links:
   github: https://github.com/rafayet-git
