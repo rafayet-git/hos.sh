@@ -11,7 +11,7 @@ I've finally decided to make use of this domain I grabbed, by making a personal 
 
 I decided to use Jekyll for this, but I am honestly a complete noob in terms of website styling + customization so I wanted to use a pre-made site to start off with.
 
-I've looked at several themes, such as the [Moonrise][moonrise] theme and the [Klise][klise] theme. However I eventually decided to base it off [Pixyzehn's][pixyzehn] personal website. I thought that it was closest to my use case, and was simple enough for me to customize and make changes. 
+I've looked at several themes, such as the [Moonrise][moonrise] theme and the [Klise][klise] theme, which are all awesome by their own right. However I eventually decided to base it off [Pixyzehn's][pixyzehn] personal website. I thought that it was closest to my use case, and was simple enough for me to customize and make changes. 
 
 Here's a small list of things that I hope to eventually implement for this website:
 
