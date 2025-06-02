@@ -691,3 +691,9 @@ hr {
     color: #099;
   } // Literal.Number.Integer.Long
 }
+
+/* Left align for mathjax */
+// mjx-container[display="true"] {
+//   justify-content: flex-start !important;
+//   text-align: left !important;
+// }
