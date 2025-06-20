@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetElement = document.getElementById(tagId);
         if (targetElement) {
             targetElement.classList.add('highlighted');
+            // For clicking tag links
             targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
 
-    // For clicking tag links
     function handleHashChange() {
         const hash = window.location.hash.substring(1); 
         if (hash) {
@@ -29,5 +29,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Listen for hash changes
     window.addEventListener('hashchange', handleHashChange);
     handleHashChange();
-
 });
