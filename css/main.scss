@@ -397,6 +397,13 @@ summary:focus {
     display: inline-block;
   }
 }
+.tag-section h4 {
+  display: inline;
+}
+.tag-section.highlighted h4 {
+  background-color: var(--link-background-color);
+  transition: background-color 0.3s ease;
+}
 
 /**
  * Achives
