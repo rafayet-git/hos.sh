@@ -7,7 +7,7 @@ tags: blog mathjax
 
 I've figured out how to implement Mathjax into my website.
 
-If you do not know, Mathjax is basically used to display $\LaTeX$ equations in Markdown, websites, or anything that supports javascript. It came really useful when writing notes for most of my math classes, especially with markdown editors such as [MarkText](https://www.marktext.cc/).
+If you do not know, Mathjax is basically used to display $\LaTeX$ equations in Markdown, websites, or anything that supports javascript. It came really useful when writing notes for most of my math classes, especially with markdown editors such as [MarkText](https://github.com/marktext/marktext).
 
 Adding the script itself is simple, it's just a one-liner into my external javascript file:
 ```html
