@@ -399,10 +399,15 @@ summary:focus {
 }
 .tag-section h4 {
   display: inline;
+  padding: 0rem 0rem 0.25rem 0rem;
+  background: linear-gradient(to top, var(--link-background-color) 0%, var(--link-background-color) 100%);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: background-size 0.25s ease;
 }
 .tag-section.highlighted h4 {
-  background-color: var(--link-background-color);
-  transition: background-color 0.3s ease;
+  background-size: 100% 100%;
 }
 
 /**
@@ -473,10 +478,15 @@ hr {
   border-bottom: 0.2em solid var(--link-background-color);
   box-shadow: inset 0 -0.2em 0 var(--link-background-color);
   text-decoration: none;
+  background: linear-gradient(to top, var(--link-background-color) 0%, var(--link-background-color) 100%);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: background-size 0.25s ease;
 
   &:hover {
     color: var(--text-color);
-    background-color: var(--link-background-color);
+    background-size: 100% 100%;
     text-decoration: none;
   }
 }
