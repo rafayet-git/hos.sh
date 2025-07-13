@@ -709,6 +709,13 @@ hr {
   } // Literal.Number.Integer.Long
 }
 
+/* Comments section spacing */
+#post-comments {
+  margin-top: $spacing-unit ;
+  padding: $spacing-unit ; 
+  border-top: 1px solid var(--border-color, $border-color);
+}
+
 /* Left align for mathjax */
 // mjx-container[display="true"] {
 //   justify-content: flex-start !important;

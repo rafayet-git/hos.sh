@@ -1,0 +1,36 @@
+<div id="post-comments"></div>
+<script>
+  function loadGiscusComments() {
+      var script = document.createElement('script');
+      script.src = "https://giscus.app/client.js";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+
+      script.setAttribute("data-repo", "rafayet-git/hos.sh");
+      script.setAttribute("data-repo-id", "R_kgDOMt9O9w");
+      script.setAttribute("data-category", "Announcements");
+      script.setAttribute("data-category-id", "DIC_kwDOMt9O984Cs37U");
+      script.setAttribute("data-mapping", "pathname");
+      script.setAttribute("data-strict", "1");
+      script.setAttribute("data-reactions-enabled", "0"); // Looks terrible atm
+      script.setAttribute("data-emit-metadata", "0");
+      script.setAttribute("data-input-position", "top");
+      script.setAttribute("data-theme", "preferred_color_scheme");
+      script.setAttribute("data-lang", "en");
+      script.setAttribute("data-loading", "lazy");
+
+      document.getElementById("post-comments").appendChild(script);
+  }
+
+  var scriptLoaded = false;
+  function loadCommentScriptOnce() {
+    if (!scriptLoaded) {
+      loadGiscusComments();
+      scriptLoaded = true;
+    }
+  }
+
+  setTimeout(loadCommentScriptOnce, 5000);
+  window.addEventListener("scroll", loadCommentScriptOnce);
+</script>
+<!-- cc: https://github.com/nithinbekal/nithinbekal.github.io -->

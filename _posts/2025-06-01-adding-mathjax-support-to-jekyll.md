@@ -83,8 +83,6 @@ mjx-container[display="true"] {
 }
 ```
 
----
-
 #### References:
 
 - [LaTeX Math Magic](https://cwoebker.com/posts/latex-math-magic)
