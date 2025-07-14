@@ -1,9 +1,9 @@
 backend:
   name: github
-  branch: main
   repo: rafayet-git/hos.sh
+  branch: main
+  client_id:  Ov23lifsGPfs4FerklB9 
 
-# Uncomment below to enable drafts
 # publish_mode: editorial_workflow
 
 media_folder: "assets/posts"
