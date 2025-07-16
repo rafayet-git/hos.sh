@@ -32,10 +32,10 @@ links:
 collections:
   posts:
     output: true
-    permalink: /articles/:title
+    permalink: /posts/:title
 
 paginate: 8
-paginate_path: /articles/:num
+paginate_path: /posts/:num
 
 sass:
   style: compressed
