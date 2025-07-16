@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: rafayet-git/hos.sh
+  branch: main
+  base_url: https://sveltia-cms-auth.rafayet-extras.workers.dev/
+
+# backend:
+#   name: test-repo
+
+media_folder: "assets"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Tags", name: "tags", widget: "string", required: false, hint: "Enter tags separated by spaces (e.g., 'blog jekyll mathjax')" }
+      - { label: "Body", name: "body", widget: "markdown" }
