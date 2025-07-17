@@ -4,7 +4,6 @@ title: My first post + Future plans for this website
 date: 2025-05-25
 tags: blog
 ---
-
 Hello! 
 
 I've finally decided to make use of this domain I grabbed, by making a personal website with it.
@@ -24,7 +23,7 @@ Here's a small list of things that I hope to eventually implement for this websi
 - Port some of my existing writeups, guides, and notes.
 - Talk about my own work!
 
-Anyways... Thank you for visiting!
+Anyways.. Thank you for visiting!
 
 ![Goodbye]({{ site.url }}/assets/posts/happy-steam.gif)
 
