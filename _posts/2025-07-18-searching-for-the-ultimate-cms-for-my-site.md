@@ -60,7 +60,7 @@ I also managed to get it to authenticate with a Github account, using Sveltia's 
 
 While I mentioned using Sveltia CMS, it is very far from perfect. My favorite part is the media manager, which allows me to upload & download files on different directories, even if they are subdirectories of each other. This means i can edit my assets/ folder and assets/posts/ folders separately.
 
-![](/assets/posts/CMSfolders.png)
+![Showcase of assets folder versus posts](/assets/posts/CMSfolders.png)
 
 However, my least favorite part is the post editor. It is a very basic markdown editor with no special features. Code blocks do not show syntax highlighting, no matter what language I put on them. LaTeX/MathJax does not display at all. Also, Liquid and HTML (which Jekyll supports) does not get processed, which is expected but annoying if i wanted to edit the main pages.
 
