@@ -23,7 +23,7 @@ html {
   --secondary-background-color: #2e303c;
   --text-color: #f8f8f2;
   --secondary-text-color: #ebebf599;
-  --link-background-color: #4c36ad;
+  --link-background-color: #165098;
   --syntax-background-color: #2c2c2eff;
 }
 
@@ -33,7 +33,7 @@ html {
     --secondary-background-color: #e9eaf0;
     --text-color: #000000;
     --secondary-text-color: #3c3c4399;
-    --link-background-color: #ccccff;
+    --link-background-color: #85B3EA;
     --syntax-background-color: #f2f2f2;
   }
 }
@@ -240,7 +240,7 @@ summary:focus {
 .navbar-brand {
   letter-spacing: 4px;
   margin-bottom: 0;
-  float: left;
+  float: right;
   color: var(--text-color);
 
   &,
@@ -271,6 +271,7 @@ summary:focus {
   .navbar-toggler {
     padding: 0.2rem;
     font-size: 1rem;
+    margin-right: auto;
   }
 }
 
@@ -716,9 +717,11 @@ hr {
 }
 
 /* Comments section spacing */
+
 #post-comments {
   margin-top: $spacing-unit ;
-  padding: $spacing-unit ; 
+  padding-top: $spacing-unit;
+  padding-bottom: $spacing-unit; 
   border-top: 1px solid var(--border-color, $border-color);
 }
 

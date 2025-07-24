@@ -1,7 +1,19 @@
 <header class="nav-header">
     <div class="wrapper">
         <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="/">🌹</a>
+            <a class="navbar-brand" href="/">
+                {% if page.url == '/' %}
+                    🏠
+                {% elsif page.url contains '/posts/' or page.layout == 'post' %}
+                    📝
+                {% elsif page.url contains '/tags' %}
+                    🏷️
+                {% elsif page.url contains '/timeline' %}
+                    📅
+                {% else %}
+                    🌹
+                {% endif %}
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
