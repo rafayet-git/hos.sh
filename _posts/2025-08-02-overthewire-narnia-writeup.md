@@ -467,3 +467,4 @@ Great, we've got the address at 0xffffd581. Now we'd need to adjust it and the r
 There's nothing to do here for now.
 
 We've finished Narnia! Thanks for reading my writeup. Next stop: possibly Vortex or Manpage?
+
