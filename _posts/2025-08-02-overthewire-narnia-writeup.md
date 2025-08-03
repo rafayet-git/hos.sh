@@ -4,7 +4,8 @@ title: OverTheWire Narnia Writeup
 date: 2025-08-02
 tags: ctf overthewire c/cpp
 ---
-After an almost year-long hiatus, I've come back to OverTheWire.org to work on the next CTF wargame. This post contains my writeup to all the levels, complete with my thinking process and context.
+
+After an almost year-long hiatus, I've come back to this site to work on the next CTF wargame. This post contains my writeup to all the levels, complete with my thinking process and context.
 
 Narnia helped me learn and understand more about how code works at a binary level, especially with how I could use vulnerabilities in machine code and C code/functions in order to gain higher access, and how I could prevent these issues from happening in my own code.
 
@@ -103,7 +104,7 @@ However I noticed that the EGG variable is directly setting the function `ret`. 
 
 I found out about something called shellcode, which is basically a just a set of assembly instructions that allow us to run arbritary code. There's a bunch of random shellcode samples from the internet, such as this [list from Shell-storm](https://shell-storm.org/shellcode/index.html), and the code that I've found working for this level is [this one](https://shell-storm.org/shellcode/files/shellcode-606.html), since it is for linux x86 systems and it will run the shell at the currect user ID. You can parse this as one line if you want to.
 
-Once we set the variable with ``export EGG=`echo -e "\\x6a\\x0b\\x58\\..."\` \`\`{:.language-bash .highlight}, we can run the program and get the shell as narnia2!
+Once we set the variable with ``export EGG=`echo -e "\x6a\x0b\x58\..."` ``{:.language-bash .highlight}, we can run the program and get the shell as narnia2!
 
 ### Level 2
 
@@ -449,11 +450,11 @@ r `echo -e "hellohellohellohello\x60\xd5\xff\xffAAAA"`
 r `echo -e "hellohellohellohello\x5c\xd5\xff\xffAAAABBBB"`
 ```
 
-Now if we account that for the 33-byte shellcode, it would be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAABBBB"` \`\`
+Now if we account that for the 33-byte shellcode, it would be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAABBBB"` ``
 
 The `AAAA` here previously held our frame pointer, which isn't useful to us, so we can put any random value on it. The `BBBB` will be replaced by our own return address. Since we're providing the shellcode in our argument, we need to get the address that goes directly to it. Luckily, we have our pointer value right here, so we can just push it 32(0x20) letters forward. That would make our return address as 0xffffd55b.
 
-And finally, we can append the entire shellcode to the back of our input. This isn't entirely safe because it relies on overwriting random memory values that the program might use, but I wouldn't care in this situation. Our command would then be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAA\x5b\xd5\xff\xff\x6a...\x80"` \`\`.
+And finally, we can append the entire shellcode to the back of our input. This isn't entirely safe because it relies on overwriting random memory values that the program might use, but I wouldn't care in this situation. Our command would then be ``r `echo -e "hellohellohellohello\x3b\xd5\xff\xffAAAA\x5b\xd5\xff\xff\x6a...\x80"` ``.
 
 If we run it, we will be able to get the shell, however GDB is preventing us from accessing as the next user. We need to exit it and... damn. We need to re-calculate the memory values again. To do this we can use the `xxd` command to examine the values that get printed out if we overflow the buffer to 20 characters:
 
@@ -465,4 +466,4 @@ Great, we've got the address at 0xffffd581. Now we'd need to adjust it and the r
 
 There's nothing to do here for now.
 
-We've finished Narnia! Thanks for reading my writeup.
+We've finished Narnia! Thanks for reading my writeup. Next stop: possibly Vortex or Manpage?
