@@ -2,7 +2,7 @@
 layout: post
 title: OverTheWire Narnia Writeup
 date: 2025-08-02
-tags: ctf overthewire c/cpp
+tags: ctf c/cpp
 ---
 
 After an almost year-long hiatus, I've come back to this site to work on the next CTF wargame. This post contains my writeup to all the levels, complete with my thinking process and context.
