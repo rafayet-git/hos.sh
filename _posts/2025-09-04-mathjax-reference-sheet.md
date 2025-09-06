@@ -17,13 +17,15 @@ Showing this first because it's probably the first thing you'd want to check out
 
 ### Formatting
 
+> I provide source code, but you can also right click on an equation to get the functions as well. 
+
 $ a^2 = C_1cos(wt) \rightarrow sin(a)^2_5 $ is `a^2 = C_1cos(wt) \rightarrow sin(a)^2_5`{:.language-latex .highlight}
 
 $\sum_{i=1}^{n} $ is `\sum_{i=1}^{n}`{:.language-latex .highlight}
 
 $\frac{x}{y}$ is `\frac{x}{y}`{:.language-latex .highlight}
 
-$\underrightarrow{R_1 \leftrightarrow R_2}$ for arrows under equations
+$\underrightarrow{R_1 \leftrightarrow R_2}$ for arrows under equations: `$\underrightarrow{R_1 \leftrightarrow R_2}$`{:.language-latex .highlight}
 
 `\\\\` starts a new line.
 
