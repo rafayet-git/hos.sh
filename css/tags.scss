@@ -1,0 +1,23 @@
+---
+---
+
+.tag-cloud {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+}
+.tag-section h4 {
+  display: inline;
+  padding: 0rem 0rem 0.25rem 0rem;
+  background: linear-gradient(to top, var(--link-background-color) 0%, var(--link-background-color) 100%);
+  background-size: 100% 0%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  transition: background-size 0.25s ease;
+}
+.tag-section.highlighted h4 {
+  background-size: 100% 100%;
+}

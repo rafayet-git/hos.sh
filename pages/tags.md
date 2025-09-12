@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 permalink: /tags/
+custom_css: tags
 ---
 
 {% assign tag_names = "" | split: "|"  %}
