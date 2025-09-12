@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function highlightTag(tagId) {
         removeAllHighlights();
-        console.log("Highlighting tag:", tagId);
         const targetElement = document.getElementById(tagId);
         if (targetElement) {
             targetElement.classList.add('highlighted');
