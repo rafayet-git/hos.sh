@@ -8,7 +8,20 @@ permalink: /
 
 Hello! I am Rafayet, a Computer Science student in CUNY Hunter College.
 
-This website is still under construction, but feel free to browse anyway!
+I use this site to document 
+
+You can also find info about me, such as projects, experience, etc. in 
+
+Feel free to reach iyt
+
+##### What I'm working on:
+
+- This page (posts, add new features)
+    - a
+    - b
+- Two projects for CTP
+- Maintaining past projects
+- Exploring virtualization, networking, and building my own homelab (might share in the future)
 
 {% include external_links.html %}
 
