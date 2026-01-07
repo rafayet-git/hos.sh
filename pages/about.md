@@ -2,10 +2,49 @@
 layout: page
 title: About
 permalink: /about
+css: header-highlight
 ---
 
 ## Rafayet Hossain
 
-I just made this page, so there's nothing to show yet lol
+<p class="post-meta">
+    <div class="post-tags">
+        <a href="#about-me"> About</a> 
+        <a href="#skills"> Skills</a>
+        <a href="#experience"> Experience</a>
+        <a href="#projects"> Projects</a>
+        <a href="#education"> Education</a>
+        <a href="#resume"> Resume</a>
+        <a href="#contact-me"> Contact</a>
+    </div>
+</p>
 
-Todo: add YAML data on projects, experience, etc.
+### About Me
+
+test
+
+### Skills
+
+test
+
+### Experience
+
+test
+
+### Projects
+
+test
+
+### Education
+
+test
+
+### Resume
+
+test
+
+### Contact Me
+
+test
+
+<script src="{{ '/js/tags.js' | prepend: site.baseurl }}"></script>
