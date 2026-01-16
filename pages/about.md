@@ -50,10 +50,10 @@ todo
                 <th>Semester Taken</th>
             </tr>
             <tr>
-                <th>Software Analysis and Design 2 CSCI 235</th>
-                <th>https://hunter-college-cs235-summer-2024.github.io/Hunter_CS235_Summer24/</th>
-                <th></th>
-                <th>2024 Summer</th>
+                <td>Software Analysis and Design 2 CSCI 235</td>
+                <td>https://hunter-college-cs235-summer-2024.github.io/Hunter_CS235_Summer24/</td>
+                <td></td>
+                <td>2024 Summer</td>
             </tr>
         </table>
 
