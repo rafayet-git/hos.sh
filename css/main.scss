@@ -714,3 +714,22 @@ hr {
 //   justify-content: flex-start !important;
 //   text-align: left !important;
 // }
+
+table {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid var(--text-color);
+}
+
+table th,
+table td {
+  padding: 6px 13px;
+  text-align: left;
+  border: 1px solid var(--text-color);
+}
+
+table th {
+  font-weight: 600;
+  color: var(--text-color);
+}
+

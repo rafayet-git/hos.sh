@@ -13,7 +13,7 @@ css: header-highlight
         <a href="#skills"> Skills</a>
         <a href="#experience"> Experience</a>
         <a href="#projects"> Projects</a>
-        <a href="#education"> Education</a>
+        <a href="#education--certs"> Education</a>
         <a href="#resume"> Resume</a>
         <a href="#contact-me"> Contact</a>
     </div>
@@ -21,23 +21,48 @@ css: header-highlight
 
 ### About Me
 
-test
+todo
 
 ### Skills
 
-test
+todo
 
 ### Experience
 
-test
+todo
 
 ### Projects
 
-test
+todo
 
-### Education
+### Education & Certs
 
-test
+- CUNY - Hunter College
+    - a
+    - b
+    - <details>
+        <summary>A list of 15 relevant courses I've taken</summary>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Course Link</th>
+                <th>Coursework (if available)</th>
+                <th>Semester Taken</th>
+            </tr>
+            <tr>
+                <th>Software Analysis and Design 2 CSCI 235</th>
+                <th>https://hunter-college-cs235-summer-2024.github.io/Hunter_CS235_Summer24/</th>
+                <th></th>
+                <th>2024 Summer</th>
+            </tr>
+        </table>
+
+        </details>
+- Codepath
+    - **Advanced Technical Interview Prep** (August 2024) - [Link to Course](https://www.codepath.org/courses/tech-interview-prep)
+        - I learned
+    - **Intermediate Cybersecurity** (April 2024) - [Link to Course](https://www.codepath.org/courses/cybersecurity)
+        - I learned
 
 ### Resume
 
