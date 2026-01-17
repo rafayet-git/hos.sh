@@ -2,6 +2,66 @@
 - category: Projects
 - category: Skills
 - category: Experience
+  orgs:
+    - name: CUNY - Hunter College
+      courses:
+        - name: Data Communications and Networks (CSCI 415)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0246061
+          coursework: 
+          semester: 2025 Fall
+        - name: Operating Systems (CSCI 340)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0245521
+          coursework: 
+          semester: 2025 Fall
+        - name: Artificial Intelligence (CSCI 350)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0245541
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/cs350
+          semester: 2025 Fall
+        - name: Practical Web Development (CSCI 39548)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/1466581
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/cs39548
+          semester: 2025 Summer
+        - name: Introduction to Applied Statistics (STAT 213)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0347351
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/stat213
+          semester: 2025 Spring
+        - name: Software Analysis and Design 3 (CSCI 335)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0245511
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/cs335
+          semester: 2025 Spring
+        - name: Computer Architecture 2 (CSCI 260)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0245211
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/cs260
+          semester: 2025 Spring
+        - name: Matrix Algebra (MATH 160)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0299031
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/math160
+          semester: 2024 Fall
+        - name: Computer Architecture 1 (CSCI 160)
+          link: https://www.cs.hunter.cuny.edu/~eschweit/160stuff/160.html
+          coursework: 
+          semester: 2024 Fall
+        - name: Software Analysis and Design 2 (CSCI 235)
+          link: https://hunter-college-cs235-summer-2024.github.io/Hunter_CS235_Summer24/
+          coursework: https://github.com/rafayet-git/class-assignments/tree/main/cs235
+          semester: 2024 Summer
+        - name: Introduction to Mathematical Proof Writing (MATH 156)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0299011
+          coursework: 
+          semester: 2024 Spring
+        - name: Discrete Structures (CSCI 150)
+          link: https://www.cs.hunter.cuny.edu/~saad/courses/dm/
+          coursework: 
+          semester: 2024 Spring
+        - name: Calculus 2 (MATH 155)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0299001
+          coursework: 
+          semester: 2024 Spring
+        - name: Software Analysis and Design 1 (CSCI 135)
+          link: https://tong-yee.github.io/135/2023_fall.html
+          coursework: 
+          semester: 2023 Fall
+    - name: Codepath
 - category: Education
 - category: Contact
 

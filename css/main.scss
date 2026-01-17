@@ -700,8 +700,9 @@ hr {
   } // Literal.Number.Integer.Long
 }
 
-/* Comments section spacing */
-
+/**
+ * Comments section spacing
+ */
 #post-comments {
   margin-top: $spacing-unit ;
   padding-top: $spacing-unit;
@@ -709,12 +710,17 @@ hr {
   border-top: 1px solid var(--border-color, $border-color);
 }
 
-/* Left align for mathjax */
+/**
+ * Left align for mathjax
+ */
 // mjx-container[display="true"] {
 //   justify-content: flex-start !important;
 //   text-align: left !important;
 // }
 
+/**
+ * Tables
+ */
 table {
   width: 100%;
   margin: 20px 0;
