@@ -38,8 +38,9 @@ todo
 ### Education & Certs
 
 - CUNY - Hunter College
-    - a
-    - b
+    - B.A in Computer Science, with a Mathematics minor.
+    - GPA: 3.634
+    - Expected to graduate in May 2027
     - <details>
         <summary>A list of 15 relevant courses I've taken</summary>
         <table>
