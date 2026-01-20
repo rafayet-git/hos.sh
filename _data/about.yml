@@ -2,6 +2,7 @@
 - category: Projects
 - category: Skills
 - category: Experience
+- category: Education
   orgs:
     - name: CUNY - Hunter College
       courses:
@@ -62,6 +63,5 @@
           coursework: 
           semester: 2023 Fall
     - name: Codepath
-- category: Education
 - category: Contact
-
+  phone: "+1 (973)-556-7443"
