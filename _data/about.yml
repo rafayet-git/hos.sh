@@ -1,10 +1,12 @@
 - category: About Me
-- category: Projects
 - category: Skills
 - category: Experience
+- category: Projects
 - category: Education
   orgs:
     - name: CUNY - Hunter College
+      gpa: 3.634
+      gradDate: May 2027
       courses:
         - name: Data Communications and Networks (CSCI 415)
           link: https://hunter-undergraduate.catalog.cuny.edu/courses/0246061
@@ -63,5 +65,14 @@
           coursework: 
           semester: 2023 Fall
     - name: Codepath
+      courses:
+        - name: Advanced Technical Interview Prep
+          completionDate: August 2024
+          link: https://www.codepath.org/courses/tech-interview-prep
+          details: I learned how to
+        - name: Intermediate Cybersecurity
+          completionDate: April 2024
+          link: https://www.codepath.org/courses/cybersecurity
+          details: I learned how
 - category: Contact
   phone: "+1 (973)-556-7443"

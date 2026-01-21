@@ -5,6 +5,8 @@ permalink: /about
 css: header-highlight
 ---
 
+{% assign aboutData = site.data.about %}
+
 ## Rafayet Hossain
 
 <p class="post-meta">
@@ -37,12 +39,16 @@ todo
 
 ### Education & Certs
 
-- CUNY - Hunter College
+{% assign eduData = aboutData | where: "category", "Education" | first %}
+{% assign collegeData = eduData.orgs[0] %}
+{% assign codepathData = eduData.orgs[1] %}
+
+- {{ collegeData.name }}
     - B.A in Computer Science, with a Mathematics minor.
-    - GPA: 3.634
-    - Expected to graduate in May 2027
+    - GPA: {{ collegeData.gpa }}
+    - Expected to graduate in {{ collegeData.gradDate }}
     - <details>
-        <summary>A list of 15 relevant courses I've taken</summary>
+        <summary>A list of {{ collegeData.courses.size }} relevant courses I've taken</summary>
         <table>
             <tr>
                 <th>Name</th>
@@ -50,20 +56,25 @@ todo
                 <th>Coursework (if available)</th>
                 <th>Semester Taken</th>
             </tr>
-            <tr>
-                <td>Software Analysis and Design 2 CSCI 235</td>
-                <td>https://hunter-college-cs235-summer-2024.github.io/Hunter_CS235_Summer24/</td>
-                <td></td>
-                <td>2024 Summer</td>
-            </tr>
+            {% for course in collegeData.courses %}
+                <tr>
+                    <td>{{ course.name }}</td>
+                    <td><a href="{{ course.link }}">Link</a></td>
+                    <td>
+                        {% if course.coursework %}
+                            <a href="{{ course.coursework }}">Coursework</a>
+                        {% endif %}
+                    </td>
+                    <td>{{ course.semester }}</td>
+                </tr>
+            {% endfor %}
         </table>
 
         </details>
-- Codepath
-    - **Advanced Technical Interview Prep** (August 2024) - [Link to Course](https://www.codepath.org/courses/tech-interview-prep)
-        - I learned
-    - **Intermediate Cybersecurity** (April 2024) - [Link to Course](https://www.codepath.org/courses/cybersecurity)
-        - I learned
+- {{ codepathData.name }} {% for course in codepathData.courses %}
+    - **{{ course.name }}** ({{course.completionDate}}) - [Link to Course]({{course.link}})
+        - {{course.details}}
+    {% endfor %}
 
 ### Resume
 
@@ -72,13 +83,15 @@ If it doesn't show for you, download [here]({{ '/assets/rh-resume.pdf' | prepend
 
 ### Contact Me
 
+{% assign phoneNum = aboutData | where: "category", "Contact" | first %}
+
 LinkedIn: [rafayeth]({{ site.links.linkedin }})
 
 GitHub: [rafayet-git]({{ site.links.github }})
 
 My E-mail: [rafayet@hos.sh]({{ site.links.email }})
 
-My Phone: +1 (973)-556-7443
+My Phone: {{ phoneNum.phone }}
 
 I strongly prefer text messages over calls. Please notify me first before calling, as I've been receiving a lot of spam recently!
 
