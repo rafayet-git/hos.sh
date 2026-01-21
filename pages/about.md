@@ -5,8 +5,6 @@ permalink: /about
 css: header-highlight
 ---
 
-{% assign aboutData = site.data.about %}
-
 ## Rafayet Hossain
 
 <p class="post-meta">
@@ -39,7 +37,7 @@ todo
 
 ### Education & Certs
 
-{% assign eduData = aboutData | where: "category", "Education" | first %}
+{% assign eduData = site.data.about | where: "category", "Education" | first %}
 {% assign collegeData = eduData.orgs[0] %}
 {% assign codepathData = eduData.orgs[1] %}
 
@@ -81,7 +79,7 @@ If it doesn't show for you, download [here]({{ '/assets/rh-resume.pdf' | prepend
 
 ### Contact Me
 
-{% assign phoneNum = aboutData | where: "category", "Contact" | first %}
+{% assign phoneNum = site.data.about | where: "category", "Contact" | first %}
 
 LinkedIn: [rafayeth]({{ site.links.linkedin }})
 
