@@ -72,9 +72,7 @@ todo
 
         </details>
 - {{ codepathData.name }} {% for course in codepathData.courses %}
-    - **{{ course.name }}** ({{course.completionDate}}) - [Link to Course]({{course.link}})
-        - {{course.details}}
-    {% endfor %}
+    - **{{ course.name }}** ({{course.completionDate}}) - [Link to Course]({{course.link}}) {% endfor %}
 
 ### Resume
 
