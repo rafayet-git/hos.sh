@@ -1,5 +1,78 @@
 - category: Skills
+  skills:
+    - name: Programming Languages
+      list:
+        - name: C
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg
+        - name: C++
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg
+        - name: Python
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg
+        - name: TypeScript
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg
+        - name: JavaScript
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg
+        - name: HTML
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg
+        - name: CSS
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg
+        - name: Bash
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg
+        - name: Zsh
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zsh/zsh-original.svg
+        - name: Markdown
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg
+        - name: LaTeX
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg
+    - name: Frameworks & Libraries
+      list:
+        - name: Next.js
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg
+        - name: React
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg
+        - name: Node.js
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg
+        - name: TailwindCSS
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg
+        - name: Supabase
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg
+        - name: Jekyll
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jekyll/jekyll-original.svg
+        - name: OpenCV
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg
+    - name: Tools & Technologies
+      list:
+        - name: Git
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg
+        - name: GitHub
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg
+        - name: GitHub Actions
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg
+        - name: PostgreSQL
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg
+        - name: Linux
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
+        - name: Arch Linux
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/archlinux/archlinux-original.svg
+        - name: Unix
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unix/unix-original.svg
+        - name: VS Code
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg
+        - name: Neovim
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neovim/neovim-original.svg
+        - name: GCC
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gcc/gcc-original.svg
+        - name: KVM
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
+        - name: Vercel
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg
+        - name: Firefox
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg
 - category: Experience
+  jobs:
+    - name: CUNY Tech Prep
+    - name: Jupiter Leo Productions
+    - name: Basta G-SWEP (Google Software Engineering Program)
 - category: Projects
   projects:
     - name: HerRide
