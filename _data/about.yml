@@ -34,6 +34,8 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg
         - name: TailwindCSS
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg
+        - name: Bootstrap
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg
         - name: Supabase
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg
         - name: Jekyll
@@ -74,10 +76,11 @@
     - name: Jupiter Leo Productions
     - name: Basta G-SWEP (Google Software Engineering Program)
 - category: Projects
+  # misc_projects:
   projects:
     - name: HerRide
       sub: CUNY Tech Prep
-      skills:
+      skills: Next.js, Node.js, Supabase, PostgreSQL, Clerk, TypeScript, TailwindCSS  
       links:
         - name: Source
           url: https://github.com/Her-Ride/HerRide
@@ -86,7 +89,7 @@
       notes:
     - name: Check My Fit
       sub: Hackathon - CTP Hacks 2025
-      skills:
+      skills: Node.js, Express, EJS, HTML, CSS
       links:
         - name: Source
           url: https://github.com/camzillajs101/ctp-hacks-2025-hackstreet
@@ -95,7 +98,7 @@
       notes:
     - name: EzRecycle
       sub: Class Project - Practical Web Dev
-      skills:
+      skills: React, Node.js, TailwindCSS, HTML, CSS	
       links:
         - name: Source
           url: https://github.com/rafayet-git/EzRecycle
@@ -104,7 +107,7 @@
       notes:
     - name: hos.sh
       sub: Personal Project
-      skills:
+      skills: Jekyll, Bootstrap, JavaScript, HTML, CSS
       links:
         - name: Source
           url: https://github.com/rafayet-git/hos.sh
@@ -113,7 +116,7 @@
       notes:
     - name: Hawk's Highway
       sub: Hackathon - HunterHacks Spring 2025
-      skills:
+      skills: React, Node.js, Supabase, HTML, CSS	
       links:
         - name: Source
           url: https://github.com/Xiej5645/hawks-highway
@@ -124,14 +127,14 @@
       notes:
     - name: PVD Image Steganography
       sub: Personal Project
-      skills:
+      skills: C++, OpenCV
       links:
         - name: Source
           url: https://github.com/rafayet-git/pvd-image-steganography
       notes:
     - name: PySweeper
       sub: Personal Project
-      skills:
+      skills: Python, Pygame, PyInstaller, Github Actions	
       links:
         - name: Source
           url: https://github.com/rafayet-git/pysweeper
@@ -196,10 +199,10 @@
     - name: Codepath
       courses:
         - name: Advanced Technical Interview Prep
-          completionDate: August 2024
+          completion_date: August 2024
           link: https://www.codepath.org/courses/tech-interview-prep
         - name: Intermediate Cybersecurity
-          completionDate: April 2024
+          completion_date: April 2024
           link: https://www.codepath.org/courses/cybersecurity
 - category: Contact
   phone: "+1 (973)-556-7443"
