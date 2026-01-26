@@ -87,6 +87,7 @@
         - name: Site
           url: https://her-ride-omega.vercel.app/
       notes:
+        - Built a women-only ridesharing platform
     - name: Check My Fit
       sub: Hackathon - CTP Hacks 2025
       skills: Node.js, Express, EJS, HTML, CSS
@@ -96,6 +97,7 @@
         - name: Devpost
           url: https://devpost.com/software/closetmate-x64y2m
       notes:
+        - Built an outfit tracker and planner
     - name: EzRecycle
       sub: Class Project - Practical Web Dev
       skills: React, Node.js, TailwindCSS, HTML, CSS	
@@ -105,6 +107,7 @@
         - name: Site
           url: https://ez-recycle.vercel.app/
       notes:
+        - Built an AI-powered recycling guide
     - name: hos.sh
       sub: Personal Project
       skills: Jekyll, Bootstrap, JavaScript, HTML, CSS
@@ -114,6 +117,7 @@
         - name: Site
           url: https://hos.sh
       notes:
+        - Built a personal website containg my portfolio and blog
     - name: Hawk's Highway
       sub: Hackathon - HunterHacks Spring 2025
       skills: React, Node.js, Supabase, HTML, CSS	
@@ -125,6 +129,7 @@
         - name: Devpost
           url: https://devpost.com/software/hawks-highway
       notes:
+        - Built an eco-friendly travel planner
     - name: PVD Image Steganography
       sub: Personal Project
       skills: C++, OpenCV
@@ -132,6 +137,7 @@
         - name: Source
           url: https://github.com/rafayet-git/pvd-image-steganography
       notes:
+        - Built an image steganography program
     - name: PySweeper
       sub: Personal Project
       skills: Python, Pygame, PyInstaller, Github Actions	
@@ -141,6 +147,7 @@
         - name: Release
           url: https://github.com/rafayet-git/pysweeper/releases/latest/
       notes:
+        - Built a Minesweeper game 
 - category: Education
   orgs:
     - name: CUNY - Hunter College
