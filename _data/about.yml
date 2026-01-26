@@ -87,7 +87,10 @@
         - name: Site
           url: https://her-ride-omega.vercel.app/
       notes:
-        - Built a women-only ridesharing platform
+        - Built a women-only ridesharing platform that allows users to create, join, and manage rides easily and safely.
+        - I helped with the backend development, which consisted of creating API routes, database schemas, and integrating Supabase (Postgres database) and Clerk (user authentication) into the site so that the services worked with each other seamlessly.
+        - I also contributed to the website design and planning, mostly using services such as Trello, Notion, and Figma.
+        - A future timeline is included, which includes features such as identity verification and messaging.
     - name: Check My Fit
       sub: Hackathon - CTP Hacks 2025
       skills: Node.js, Express, EJS, HTML, CSS
@@ -97,7 +100,8 @@
         - name: Devpost
           url: https://devpost.com/software/closetmate-x64y2m
       notes:
-        - Built an outfit tracker and planner
+        - Built an outfit tracker and planner that allows users to create, schedule, and rate outfits.
+        - I mostly worked on the frontend w/ EJS templating, though I got to learn from my teammates & judges about database design and security considerations.
     - name: EzRecycle
       sub: Class Project - Practical Web Dev
       skills: React, Node.js, TailwindCSS, HTML, CSS	
@@ -107,7 +111,9 @@
         - name: Site
           url: https://ez-recycle.vercel.app/
       notes:
-        - Built an AI-powered recycling guide
+        - Built a website that helps users with recycling needs, including recycling tips, resources, and an AI-powered item recycling quiz.
+        - I helped create React frontend components, such as the resources sections and the interactive quiz.
+        - I integrated the Google Gemini AI API to power the quiz, which provides recycling suggestions and warnings based on user input. I did this by providing item data and instructions to return JSON-formatted responses, which makes parsing easier.
     - name: hos.sh
       sub: Personal Project
       skills: Jekyll, Bootstrap, JavaScript, HTML, CSS
@@ -117,7 +123,8 @@
         - name: Site
           url: https://hos.sh
       notes:
-        - Built a personal website containg my portfolio and blog
+        - Built a personal website containing my portfolio and blog, focusing on minimalism and performance.
+        - It is forked from a previous Jekyll template, but modified with various features, layout, and style changes.
     - name: Hawk's Highway
       sub: Hackathon - HunterHacks Spring 2025
       skills: React, Node.js, Supabase, HTML, CSS	
@@ -129,7 +136,9 @@
         - name: Devpost
           url: https://devpost.com/software/hawks-highway
       notes:
-        - Built an eco-friendly travel planner
+        - Built an eco-friendly travel planner that helps reduce a user's carbon footprint by suggesting alternative routes and transportation methods. 
+        - I helped integrate the Google Maps API to provide route data and UI, and helped develop the leaderboard system to track the highest CO2 savings among users.
+        - I also researched carbon emissions data for different transportation methods, though I never got to implement it.
     - name: PVD Image Steganography
       sub: Personal Project
       skills: C++, OpenCV
@@ -137,7 +146,9 @@
         - name: Source
           url: https://github.com/rafayet-git/pvd-image-steganography
       notes:
-        - Built an image steganography program
+        - Built an image steganography program that encodes and decodes text in images using the Pixel Value Differencing (PVD) method.
+        - Used OpenCV to handle image processing and file type compatibility, as well as built-in libraries to create a complete CLI experience. Also utilized various data structures such as sets, queues, bitsets, and vectors to optimize efficiency.
+        - Original idea came from a research paper on PVD steganography, which I implemented as a full project.
     - name: PySweeper
       sub: Personal Project
       skills: Python, Pygame, PyInstaller, Github Actions	
@@ -147,7 +158,8 @@
         - name: Release
           url: https://github.com/rafayet-git/pysweeper/releases/latest/
       notes:
-        - Built a Minesweeper game 
+        - Built a Minesweeper game using Pygame that includes difficulty levels, mouse and keyboard controls, and an user interface.
+        - Utilized PyInstaller to create standalone executables for Windows/Linux/Mac, and GitHub Actions to automate building and releasing new versions whenever an update is made.
 - category: Education
   orgs:
     - name: CUNY - Hunter College
