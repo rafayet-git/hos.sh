@@ -3,7 +3,8 @@
     - name: Programming Languages
       list:
         - name: C
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg
+          icon: devicon-c-original
+          plain: true
         - name: C++
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg
         - name: Python
@@ -17,13 +18,17 @@
         - name: CSS
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg
         - name: Bash
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg
+          icon: devicon-bash-plain
+          plain: true
         - name: Zsh
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/zsh/zsh-original.svg
+          icon: devicon-zsh-plain
+          plain: true
         - name: Markdown
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg
+          icon: devicon-markdown-plain
+          plain: true
         - name: LaTeX
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg
+          icon: devicon-latex-plain
+          plain: true
     - name: Frameworks & Libraries
       list:
         - name: Next.js
@@ -47,7 +52,8 @@
         - name: Git
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg
         - name: GitHub
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg
+          icon: devicon-github-original
+          plain: true
         - name: GitHub Actions
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg
         - name: PostgreSQL
@@ -64,10 +70,11 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neovim/neovim-original.svg
         - name: GCC
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gcc/gcc-original.svg
-        - name: KVM
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
         - name: Vercel
-          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg
+          icon: devicon-vercel-original
+          plain: true
+        - name: Figma
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg
         - name: Firefox
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg
 - category: Experience
@@ -91,7 +98,7 @@
       time: October 2024 - December 2024
       notes:
         - Spent 10 weeks with one-to-one interviews and conversations with a Google SWE, practicing technical interview problems & learning about software engineering best practices.
-        - I learned about various industry topics such as technical interview types based on company scale/needs, divide & conquer problem solving, async/multithreading/distributed computing, and iterators.
+        - I learned about various industry topics such as technical interview variants based on company scale/needs, divide & conquer problem solving, async/multithreading/distributed computing, and iterators.
 - category: Projects
   # misc_projects:
   projects:

@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about
 css: header-highlight
+ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
 ---
 
 ## Rafayet Hossain
@@ -25,15 +26,46 @@ todo
 
 ### Skills
 
-todo
+{% assign skillsData = site.data.about | where: "category", "Skills" | first %}
+
+{% for skillGroup in skillsData.skills %}
+- <details open>
+    <summary>{{ skillGroup.name }}</summary>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; padding: 12px 8px;">
+        {% for skill in skillGroup.list %}
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+            {% if skill.plain %}
+            <i class="{{ skill.icon }}" style="font-size: 32px; margin-bottom: 4px;"></i>
+            {% else %}
+            <img src="{{ skill.icon }}" alt="{{ skill.name }}" style="width: 32px; height: 32px; margin-bottom: 4px;" />
+            {% endif %}
+            <span style="font-size: 0.75em;">{{ skill.name }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    </details>
+
+{% endfor %}
 
 ### Experience
 
-todo
+{% assign expData = site.data.about | where: "category", "Experience" | first %}
+
+{% for job in expData.jobs %}
+- **{{ job.name }}** - *{{ job.position }}*  
+  {{ job.time }} {% for note in job.notes %}
+  - {{ note }} {% endfor %}
+
+{% endfor %}
 
 ### Projects
 
-todo
+{% assign projectData = site.data.about | where: "category", "Projects" | first %}
+
+{% for project in projectData.projects %}
+- **{{ project.name }}** - *{{ project.sub }}*  
+
+{% endfor %}
 
 ### Education & Certs
 
