@@ -73,8 +73,25 @@
 - category: Experience
   jobs:
     - name: CUNY Tech Prep
+      position: Web Development Fellow
+      time: August 2025 - Present
+      notes:
+        - Participating in a year-long fellowship program, which includes workshops, hackathons, and team projects, to learn full-stack web development tools and skills.
+        - Learning about collaboration and teamwork best practices, including tools such as Git, agile methodologies, Figma, and Trello.
+        - I'll update this further when I complete the program in June.
     - name: Jupiter Leo Productions
+      position: Software Development Intern
+      time: July 2025 - August 2025
+      notes:
+        - Worked on MyFiLi, a financial education website, by adding/integrating new course content for 100+ users.
+        - Implemented quizzes and interactive exercises/games using HTML, CSS, and JavaScript. Generative AI tools were used to create images and audio media for the site.
+        - I learned about web accessibility & responsive design practices to ensure the site was usable for many users (such as using web developer tools to emulate different screen sizes and for debugging CSS and JavaScript issues).
     - name: Basta G-SWEP (Google Software Engineering Program)
+      position: Fellow
+      time: October 2024 - December 2024
+      notes:
+        - Spent 10 weeks with one-to-one interviews and conversations with a Google SWE, practicing technical interview problems & learning about software engineering best practices.
+        - I learned about various industry topics such as technical interview types based on company scale/needs, divide & conquer problem solving, async/multithreading/distributed computing, and iterators.
 - category: Projects
   # misc_projects:
   projects:
