@@ -10,12 +10,12 @@ ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
 
 <p class="post-meta">
     <div class="post-tags">
-        <a href="#about-me"> About</a> 
-        <a href="#skills"> Skills</a>
-        <a href="#experience"> Experience</a>
-        <a href="#projects"> Projects</a>
-        <a href="#education--certs"> Education</a>
-        <a href="#resume"> Resume</a>
+        <a href="#about-me"> About</a> |
+        <a href="#skills"> Skills</a> |
+        <a href="#experience"> Experience</a> |
+        <a href="#projects"> Projects</a> |
+        <a href="#education--certs"> Education</a> |
+        <a href="#resume"> Resume</a> |
         <a href="#contact-me"> Contact</a>
     </div>
 </p>
@@ -63,7 +63,20 @@ todo
 {% assign projectData = site.data.about | where: "category", "Projects" | first %}
 
 {% for project in projectData.projects %}
-- **{{ project.name }}** - *{{ project.sub }}*  
+- <details>
+    <summary><strong>{{ project.name }}</strong> - <em>{{ project.sub }}</em></summary>
+    <div>
+      <small><em>{{ project.skills }}</em></small><br>
+      {% for link in project.links %}{% if forloop.first == false %} | {% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
+      <ul>
+        {% for note in project.notes %}
+        <li>{{ note }}</li>
+        {% endfor %}
+      <img src="{{ '/assets/projects/' | append: project.name | append: '.png' | prepend: site.baseurl }}">
+
+      </ul>
+    </div>
+  </details>
 
 {% endfor %}
 
@@ -113,13 +126,13 @@ If it doesn't show for you, download [here]({{ '/assets/rh-resume.pdf' | prepend
 
 {% assign phoneNum = site.data.about | where: "category", "Contact" | first %}
 
-LinkedIn: [rafayeth]({{ site.links.linkedin }})
+- LinkedIn: [rafayeth]({{ site.links.linkedin }})
 
-GitHub: [rafayet-git]({{ site.links.github }})
+- GitHub: [rafayet-git]({{ site.links.github }})
 
-My E-mail: [rafayet@hos.sh]({{ site.links.email }})
+- My E-mail: [rafayet@hos.sh]({{ site.links.email }})
 
-My Phone: {{ phoneNum.phone }}
+- My Phone: {{ phoneNum.phone }}
 
 I strongly prefer text messages over calls. Please notify me first before calling, as I've been receiving a lot of spam recently!
 

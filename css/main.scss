@@ -102,14 +102,6 @@ figure,
   margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 /**
  * Images
  */
@@ -138,10 +130,19 @@ ol {
 }
 
 li {
+  margin-bottom:  calc(#{$spacing-unit} / 8);
   > ul,
   > ol {
     margin-bottom: 0;
   }
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: calc(#{$spacing-unit} / 4);
+  margin-bottom:  calc(#{$spacing-unit} / 4);
 }
 
 /**
@@ -233,6 +234,10 @@ pre {
 
 summary:focus {
   outline: none;
+}
+
+summary::marker {
+  font-size: 1.1em;
 }
 
 /**
