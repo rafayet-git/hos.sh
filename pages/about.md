@@ -22,7 +22,7 @@ ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
 
 ### About Me
 
-todo
+Hello
 
 ### Skills
 
@@ -31,7 +31,7 @@ todo
 {% for skillGroup in skillsData.skills %}
 - <details open>
     <summary>{{ skillGroup.name }}</summary>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; padding: 12px 8px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; padding: 12px;">
         {% for skill in skillGroup.list %}
         <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
             {% if skill.plain %}
@@ -66,7 +66,7 @@ todo
 - <details>
     <summary><strong>{{ project.name }}</strong> - <em>{{ project.sub }}</em></summary>
     <div>
-      <small><em>{{ project.skills }}</em></small><br>
+      <small class="text-muted"><em>{{ project.skills }}</em></small><br>
       {% for link in project.links %}{% if forloop.first == false %} | {% endif %}<a href="{{ link.url }}">{{ link.name }}</a>{% endfor %}
       <ul>
         {% for note in project.notes %}
