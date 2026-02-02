@@ -22,7 +22,14 @@ ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
 
 ### About Me
 
-Hello
+I like to learn about new stuff every day, whether it be about newly released frameworks and tools, trending topics in Comp Sci, or simply picking up new hobbies. 
+
+I enjoy building stuff with what I learned, turning concepts into full-stack projects, solving technical and security problems in multiple ways, and speeding up workflows to improve my own productivity. One of my earliest methods of learning involved taking physical things apart and putting them back together, so I knew what each part's role was to make the whole thing work. I find satisfaction in exploring various fields in CS to learn what I can do better in my own work.
+
+My interests span across web dev, cybersecurity, networking, and virtualization. I'm also into archiving and preserving data, because you'll never know if something you've downloaded might become lost media. I also enjoy building mechanical keyboards, cycling to new areas around NYC, and woodworking (where I somehow managed to make my own desk).
+
+I'm also using this page to give more insights to what I've built or accomplished, farther than what my resume will tell. If you have any other questions, feel free to reach out!
+
 
 ### Skills
 
