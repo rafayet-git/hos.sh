@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First 2026 Site Update
-date: 2026-02-02
+date: 2026-02-03
 tags: blog
 ---
 

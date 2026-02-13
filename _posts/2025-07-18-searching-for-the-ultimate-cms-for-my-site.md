@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Searching for the ultimate CMS (for my site)
-date: 2025-07-17
+date: 2025-07-18
 tags: blog
 ---
 For the past few weeks, I've been looking for a proper way to manage files and pages in this very site, without the need of managing the source code every time. 
