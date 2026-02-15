@@ -2,10 +2,10 @@
 layout: post
 title: Mounting Bootloaders 101
 date: 2026-02-12
-tags: ''
+tags: linux
 ---
 
-This is just a short note for myself as I am currently in my distro-hopping stage. I've been testing various bootloaders, as the game has changed over the years w/ more options that aren't just GRUB, such as rEFInd and Limine. 
+This is just a short note for myself as I am currently in my distro-hopping stage. I've been testing various bootloaders, as the game has changed over the years w/ more options that aren't just GRUB, such as rEFInd and Limine.
 
 Simplest way to do this is to load a live CD with a distro of your choice (I am using an arch-based distro here).
 
@@ -26,7 +26,7 @@ nvme0n1     259:0    0  1.9T  0 disk
 └─nvme0n1p2 259:2    0  1.9T  0 part
 ```
 
-I need to mount nvme0n1p2 as `/mnt` and then mount nvme0n1p1 inside it, as `/mnt/boot` ( sometimes it might be `/mnt/boot/efi` or `/mnt/efi` depending on how the distro installs it, but it's rare and sometimes not very important). 
+I need to mount nvme0n1p2 as `/mnt` and then mount nvme0n1p1 inside it, as `/mnt/boot` ( sometimes it might be `/mnt/boot/efi` or `/mnt/efi` depending on how the distro installs it, but it's rare and sometimes not very important).
 
 If i was using a normal formatted drive (such as ext4) it would go like this:
 
