@@ -21,7 +21,7 @@ ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
 </p>
 
 <p class="post-meta">
-    <small>Last updated: {{ page.last_modified_at | default: site.time | date: "%b %-d, %Y" }}</small>
+    <small>Last updated: {{ page.last_modified_at| date: "%b %-d, %Y" }}</small>
 </p>
 
 ### About Me
