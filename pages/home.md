@@ -26,12 +26,3 @@ Feel free to reach out using the links below!
 
 {% include external_links.html %}
 
-<p class="text-muted"><small> <span id="view-count">…</span> total views</small></p>
-
-<script>
-  fetch("https://ilovecounting.goatcounter.com/counter/TOTAL.json")
-    .then(function (r) { return r.json(); })
-    .then(function (d) { document.getElementById("view-count").textContent = d.count; })
-    .catch(function () { document.getElementById("view-count").textContent = "—"; });
-</script>
-
