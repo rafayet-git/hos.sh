@@ -1,17 +1,24 @@
 {% if post %}
-{% assign date = post.date %}
+{% assign published = post.date %}
+{% assign modified = post.last_modified_at %}
 {% assign tags = post.tags %}
 {% else %}
-{% assign date = page.date %}
+{% assign published = page.date %}
+{% assign modified = page.last_modified_at %}
 {% assign tags = page.tags %}
 {% endif %}
 
 <p class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}"
-        itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+    <time datetime="{{ published | date_to_xmlschema }}"
+        itemprop="datePublished">{{ published | date: "%b %-d, %Y" }}</time>
+    {%- if modified and modified | date: "%b %-d, %Y" != published | date: "%b %-d, %Y" -%}
+    <span class="post-updated">Last updated {{ modified | date: "%b %-d, %Y" }}</span>
+    {%- endif -%}
     <div class="post-tags">
         {% for tag in tags %}
         <a href="/tags/#{{ tag | slugize }}">#{{ tag }}</a>
         {% endfor %}
     </div>
 </p>
+
+

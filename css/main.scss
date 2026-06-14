@@ -392,6 +392,16 @@ summary::marker {
   time {
     margin-right: 0.5rem;
   }
+  .post-updated {
+    font-style: italic;
+    font-size: 0.85em;
+    opacity: 0.85;
+    &::before {
+      content: "|";
+      font-style: normal;
+      margin-right: 0.5rem;
+    }
+  }
   .post-tags {
     display: inline-block;
     a {

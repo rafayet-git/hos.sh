@@ -20,10 +20,6 @@ ext_css: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css
     </div>
 </p>
 
-<p class="post-meta">
-    <small>Last updated: {{ page.last_modified_at| date: "%b %-d, %Y" }}</small>
-</p>
-
 ### About Me
 
 I like to learn about new stuff every day, whether it be about newly released frameworks and tools, trending topics in Comp Sci, or simply picking up new hobbies. 
