@@ -3,16 +3,15 @@
 {% assign modified = post.last_modified_at %}
 {% assign tags = post.tags %}
 {% else %}
-{% assign published = page.date %}
-{% assign modified = page.last_modified_at %}
+{% assign published = page.date | date: "%b %-d, %Y" %}
+{% assign modified = page.last_modified_at | date: "%b %-d, %Y" %}
 {% assign tags = page.tags %}
 {% endif %}
 
 <p class="post-meta">
-    <time datetime="{{ published | date_to_xmlschema }}"
-        itemprop="datePublished">{{ published | date: "%b %-d, %Y" }}</time>
-    {%- if modified and modified | date: "%b %-d, %Y" != published | date: "%b %-d, %Y" -%}
-    <span class="post-updated">Last updated {{ modified | date: "%b %-d, %Y" }}</span>
+    <time datetime="{{ published | date_to_xmlschema }}" itemprop="datePublished">{{ published }}</time>
+    {%- if modified and modified != published -%}
+    <span class="post-updated">Last updated {{ modified }}</span>
     {%- endif -%}
     <div class="post-tags">
         {% for tag in tags %}
