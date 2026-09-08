@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rescuing a ThinkPad T420
-date: 2026-06-20
+date: 2026-09-08
 tags: blog linux
 ---
 
@@ -19,7 +19,7 @@ The lid was the hardest to clean. Every scratch I cleaned off seemed to spawn a 
 
 As for the keyboard, I just decided to wipe the surfaces of the keys down with some alcohol. There's no point of doing a proper cleaning since I will be replacing it anyway.
 
----
+***
 
 After giving this T420 a proper bath, I turned it on and saw it boot to the Windows 10 setup screen instead of the current Windows 11, which already makes this thing peak. After playing it around a bit, I was able to confirm the specs match with the eBay listing, and that it runs as expected.
 
@@ -102,7 +102,7 @@ In order to get past all of these blocks, we'll need to change the stock BIOS to
 
 This process is going to be tedious as it can't be done with just a program like our BIOS update from before. We'll need to flash it physically with special hardware and with a borrowed laptop running Linux. It will also require a **commplete disassembly** of the ThinkPad, so make sure you have ample desk space to store its parts!
 
---- 
+***
 
 Here's a list of stuff that I needed to get:
 
@@ -221,6 +221,13 @@ With Linux Mint it worked out of the box. I can't attest to the transfer speed, 
 Like the complaints say, I did notice the heat issue with the USB card. It gets really hot even if I just have it on the ThinkPad without actually having any USB drives on. Also I sometimes encountered an issue where the entire card gets unplugged when I try to unplug an USB. As such, I just prefer to keep the card off and put in the cover at most cases, and will only plug it in when I need the extra speed increase.  
 
 ### Upgrades Summary
+
+| Upgrade | Cost | 
+| --- | --- | 
+| Header | Title | 
+
+In total I spent around 
+
 
 
 ### Final thoughts
