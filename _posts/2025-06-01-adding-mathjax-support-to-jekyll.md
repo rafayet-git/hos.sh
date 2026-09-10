@@ -3,6 +3,7 @@ layout: post
 title: Adding Mathjax Support to Jekyll
 date: 2025-06-01
 tags: blog mathjax
+mathjax: true
 ---
 
 I've figured out how to implement Mathjax into my website.
@@ -83,7 +84,10 @@ mjx-container[display="true"] {
 }
 ```
 
+Originally the Mathjax scripts ran on every page in this site. That usually doesn't cause problems, but it gets annoying on posts where I mention prices, as MathJax would automatically treat the paragraph as an equation. Though I can escape the dollar sign with double backslashes (\\$), it can get annoying checking for this on posts that don't need MathJax at all. So I made the script only run if the page has `mathjax: true` in its front matter. It might even help with performance.
+
 #### References:
 
+- [My own MathJax reference sheet!]({% post_url 2025-09-04-mathjax-reference-sheet %})
 - [LaTeX Math Magic](https://cwoebker.com/posts/latex-math-magic)
 - [Add Mathjax Support to Jekyll and Hugo](https://www.bodunhu.com/blog/posts/add-mathjax-support-to-jekyll-and-hugo/)
