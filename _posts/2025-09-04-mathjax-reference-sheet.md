@@ -3,6 +3,7 @@ layout: post
 title: Mathjax Reference Sheet
 date: 2025-09-04
 tags: mathjax
+mathjax: true
 ---
 MathJax is a very neat tool when it comes to writing math equations on Markdown (with a compatible note-taking app like Marktext, Logseq or Obsidian). I use it when taking notes for my college courses, instead of trying to write everything on pen and paper. However there's a lot of syntax and functions baked into it, and It's not really possible to remember it all. So I assembled this page to put down equations that I most commonly use, as well as some resources that have much more info than what this page provides. 
 
