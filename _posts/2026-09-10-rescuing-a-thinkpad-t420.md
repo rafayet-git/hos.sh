@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rescuing a ThinkPad T420
-date: 2026-09-08
+date: 2026-09-10
 tags: blog linux
 ---
 
