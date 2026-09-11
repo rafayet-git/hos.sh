@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rescuing a ThinkPad T420
-date: 2026-09-10
+date: 2026-09-09
 tags: blog linux
 ---
 
@@ -271,7 +271,11 @@ In total I spent around $436 on a ThinkPad and kitting it out for full performan
 
 ### Final thoughts
 
+The ThinkPad T420 is one of the most interesting tech devices I have ever owned. It's my first introduction to the ThinkPad world, and I fully understand the hype around it. I really love how almost every part of this laptop feels modular - you can take apart the entire thing and take out almost every part and upgrade or replace them, which is part of the reason why I wanted to buy one and upgrade it as much as I can. I also liked the special gimmicky features of the ThinkPad, such as the hotswappable CD-ROM drive and the ThinkLamp, which is a small light lamp near the camera that lights up the entire keyboard area. In my opinion, a feature like the ThinkLamp feels super unique and more preferable than a simple backlit keyboard.
 
+But would I use this as my main laptop for all my computing needs? Honestly, probably not. The biggest factor that sways me away from daily driving this ThinkPad is the sheer size and weight of it. The T420 is big and heavy, which on one hand I really like, since it makes the ThinkPad feel like it's built like a tank and that it can handle physical stress or damage much better than other laptops, but on the other hand it makes it difficult to carry around with my backpack and use it in public. Other than that, I also feel like the processing power of this laptop is not quite enough for what I do every day. My upgraded T420 handles web browsing, playing videos, and typing super well, and it can handle some light coding well (though it can lag when using an IDE like VSCode), but it struggles at anything that needs a lot of CPU and RAM power, like video games, recording, and attending large group calls on Zoom or Discord. 
+
+Either way, this doesn't change how I feel about my ThinkPad T420 and ThinkPads in general. I could've easily started this journey with a newer ThinkPad model, but I feel like that would've made my upgrade journey shorter and more boring. I enjoyed every minute of tinkering, assembling, and almost breaking my ThinkPad, and doing it all with a physical piece of hardware that I actually own. That feeling can't be easily replicated with devices that are constantly getting smaller and harder to take apart or upgrade, and it definitely can't happen with computers that we don't have physical access or ownership of. That's probably the most important part of the whole journey.   
 
 Thank you for reading this long post, and I hope that it helped you with your own ThinkPad journey, or at least found it informative. Since you made it this far, you can have this Windows 7 product key that I found hidden under the battery.
 
