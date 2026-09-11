@@ -14,7 +14,6 @@ You can also find info about me, such as my projects, skills, and experience, in
 
 ##### What I'm working on:
 
-- Two full-stack projects for CUNY Tech Prep. Here's [one](https://github.com/Her-Ride/HerRide) from last semester.
 - This website
     - I'll try to post at least once a month.
     - Occasionally I'll add new features I find interesting + a potential redesign
