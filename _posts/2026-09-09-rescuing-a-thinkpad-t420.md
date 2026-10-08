@@ -14,7 +14,6 @@ I found an eBay listing that listed a ThinkPad T420 for sale, from a private cha
     <img src="/assets/posts/t420_10.jpg" alt="The lamp's brighter than my future" style="width: 50%;">
 </div>
 
-
 ### First Impressions
 
 When my ThinkPad arrived, it was a mess! The lid was scratched all over, the screen had a large crack down the center under a wall of fingerprints, the keyboard had hair and dirt packed inside, and the body was just sticky all over. I couldn't bring myself to type on it without a deep clean first.
@@ -91,7 +90,6 @@ Part of the infuriating process is that you are basically rolling a dice when it
 ### Intermission
 
 With the first 3 upgrades out of the way, I decided to spend this time actually playing around with the ThinkPad. At first, I was testing out the specs with the laptop. That meant running light games and making a bunch of website tabs, and a benchmark test to see how well it can run programs. It runs just as well as I expected, which was not very well. In its current state, I don't think I can comfortably daily-drive it without lagging and stuttering all the time, so I needed plans for upgrades. I was also concerned with the CPU temperatures, as they were constantly running hot at over 95 degrees Celsius.
-
 
 In the meantime, I had a blast installing a bunch of different operating systems. I tried a few bootleg copies of Windows 7 from [CrustyWindows](https://crustywindo.ws/collection/), most of these were just modified copies of Windows with added (or removed) features and programs, plus special theming and possibly malware. None of which I would actually use as my final OS though. 
 
@@ -268,10 +266,9 @@ Like the complaints say, I did notice the heat issue with the USB card. It gets 
 
 In total I spent around $436 on a ThinkPad and kitting it out for full performance. This doesn't include miscellaneous stuff like the cleaning equipment, thermal paste, and the 2.5 inch SATA SSD. Otherwise, I consider this a price ceiling for all the listed parts, and you'll likely end up spending less than I have. This is because I think I overspent in favor of accessibility and shipping speed (all of my parts were from eBay and Amazon, when I could've gone elsewhere for better prices).  
 
-
 ### Final thoughts
 
-The ThinkPad T420 is one of the most interesting tech devices I have ever owned. It's my first introduction to the ThinkPad world, and I fully understand the hype around it. I really love how almost every part of this laptop feels modular - you can take apart the entire thing and take out almost every part and upgrade or replace them, which is part of the reason why I wanted to buy one and upgrade it as much as I can. I also liked the special gimmicky features of the ThinkPad, such as the hotswappable CD-ROM drive and the ThinkLamp, which is a small light lamp near the camera that lights up the entire keyboard area. In my opinion, a feature like the ThinkLamp feels super unique and more preferable than a simple backlit keyboard.
+The ThinkPad T420 is one of the most interesting tech devices I have ever owned. It's my first introduction to the ThinkPad world, and I fully understand the hype around it. I really love how almost every part of this laptop feels modular - you can take apart the entire thing and take out almost every part and upgrade or replace them, which is part of the reason why I wanted to buy one and upgrade it as much as I can. I love how the classic keyboard looks and types (even if it's not OEM), which is what drove me to this specific ThinkPad instead of a newer model like the T430. I also liked the special gimmicky features of the ThinkPad, such as the hotswappable CD-ROM drive and the ThinkLamp, which is a small light lamp near the camera that lights up the entire keyboard area. In my opinion, a feature like the ThinkLamp feels super unique and more preferable than a simple backlit keyboard.
 
 But would I use this as my main laptop for all my computing needs? Honestly, probably not. The biggest factor that sways me away from daily driving this ThinkPad is the sheer size and weight of it. The T420 is big and heavy, which on one hand I really like, since it makes the ThinkPad feel like it's built like a tank and that it can handle physical stress or damage much better than other laptops, but on the other hand it makes it difficult to carry around with my backpack and use it in public. Other than that, I also feel like the processing power of this laptop is not quite enough for what I do every day. My upgraded T420 handles web browsing, playing videos, and typing super well, and it can handle some light coding well (though it can lag when using an IDE like VSCode), but it struggles at anything that needs a lot of CPU and RAM power, like video games, recording, and attending large group calls on Zoom or Discord. 
 
