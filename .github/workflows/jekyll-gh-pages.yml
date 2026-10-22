@@ -9,11 +9,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # Lets the resume repo trigger a redeploy when a new resume is released
-  repository_dispatch:
-    types: [resume-updated]
-
-
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -35,8 +30,6 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-      - name: Fetch latest resume
-        run: curl -fsSL -o assets/rh-resume.pdf https://github.com/rafayet-git/resume/releases/download/latest/rh-resume.pdf
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
