@@ -24,6 +24,8 @@ jobs:
 
       - name: Commit updated resume
         id: commit
+        env:
+          RESUME_MSG: ${{ github.event.client_payload.message }}
         run: |
           if git diff --quiet -- assets/rh-resume.pdf; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -31,12 +33,14 @@ jobs:
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add assets/rh-resume.pdf
-            git commit -m "Update resume"
+            # Use the resume repo's commit message when triggered by it
+            subject="${RESUME_MSG%%$'\n'*}"
+            git commit -m "Update resume${subject:+: $subject}"
             git push
             echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
 
-      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so start the deploy explicitly
+      # Pushes made with GITHUB_TOKEN don't trigger other workflows, so we start the deploy explicitly
       - name: Trigger site deploy
         if: steps.commit.outputs.changed == 'true'
         run: gh workflow run jekyll-gh-pages.yml --ref main
