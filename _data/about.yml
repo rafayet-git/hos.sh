@@ -13,6 +13,8 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg
         - name: JavaScript
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg
+        - name: Dart
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg
         - name: HTML
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg
         - name: CSS
@@ -45,6 +47,12 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg
         - name: Jekyll
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jekyll/jekyll-original.svg
+        - name: Flutter
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg
+        - name: Firebase
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-original.svg
+        - name: PyTorch
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg
         - name: OpenCV
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg
     - name: Tools & Technologies
@@ -58,6 +66,10 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg
         - name: PostgreSQL
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg
+        - name: SQL Server
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg
+        - name: Docker
+          icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg
         - name: Linux
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg
         - name: Arch Linux
@@ -79,14 +91,18 @@
           icon: https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firefox/firefox-original.svg
 - category: Experience
   jobs:
-    - name: CUNY Tech Prep
-      position: Web Development Fellow
-      time: August 2025 - Present
+    - name: Research Foundation of CUNY
+      position: Systems Engineering Intern
+      time: July 2026 - Present
       notes:
-        - Participating in a year-long fellowship program, which includes workshops, hackathons, and team projects, to learn full-stack web development tools and skills.
-        - Learning about collaboration and teamwork best practices, including tools such as Git, agile methodologies, Figma, and Trello.
+        - Managing Windows Servers and SQL Server instances for an NYC government office, including automated data retention, backups, and ETL processes.
+        - Developing software and machine learning tools for energy research at CUNY Queens College buildings.
+      position: Web Development Fellow
+      time: August 2025 - May 2026
+      notes:
+        - Participated in a year-long fellowship program, which includes workshops, hackathons, and team projects, to learn full-stack web development tools and skills.
+        - Learned about collaboration and teamwork best practices, including tools such as Git, agile methodologies, Figma, and Trello.
         - Developed full-stack projects, such as HerRide, using technologies such as React, Next.js, Postgres, and REST APIs. 
-        - I'll update this further when I complete the program in June.
     - name: Jupiter Leo Productions
       position: Software Development Intern
       time: July 2025 - August 2025
@@ -103,6 +119,33 @@
 - category: Projects
   # misc_projects:
   projects:
+    - name: Zig Actions Runner
+      sub: Hackathon - AI Engineer NYC 2026
+      skills: Zig, Dagger, GitHub Actions, TimescaleDB, PostgreSQL, React, TypeScript
+      links:
+        - name: Source
+          url: https://github.com/Lementknight/zig-actions-runner
+        - name: Submission
+          url: https://www.mlh.com/events/ai-engineer-nyc-2026/submissions/01a12cc2-f140-5c9c-7753-d3d66fb828b5
+      notes:
+        - Won the "Best Use of Tiger Data" category!
+        - Built a lightweight, self-hosted GitHub Actions runner in Zig that runs workflow steps as cached Dagger pipelines, reducing repeated job times by 80%.
+        - Won Best Use of Tiger Data at the AI Engineer NYC 2026 Hackathon for building a lightweight, self-hosted GitHub Actions runner in Zig that runs workflow steps as cached Dagger pipelines, reducing repeated job times by 80%.
+        - Designed the Tiger Data (TimescaleDB) schema for runs, jobs, and logs, using time-based partitioning, compression, and data retention policies to store high-volume log data efficiently.
+        - Built a React dashboard in TypeScript that shows each runner's status and its running and finished jobs, with automated tests.
+    - name: Flocksync
+      sub: Capstone Project
+      skills: Flutter, Firebase, Firestore, Dart, Node.js, OpenStreetMap
+      links:
+        - name: Source
+          url: https://github.com/Flocksync/Flocksync
+        - name: Site
+          url: https://flocksync-dcc08.web.app/
+      notes:
+        - WIP
+        - Built a cross-platform rental management application in Flutter to help tenants and property managers centralize communication, maintenance, and property-related workflows.
+        - Implemented Firebase Authentication and Firestore data models for secure account creation, tenant onboarding, role-based access control, and real-time app updates.
+        - Integrated OpenStreetMap APIs for address autocomplete and verification through a Node.js backend, significantly improving property lookup and input accuracy.
     - name: HerRide
       sub: CUNY Tech Prep
       skills: Next.js, Node.js, Supabase, PostgreSQL, Clerk, TypeScript, TailwindCSS  
@@ -188,9 +231,27 @@
 - category: Education
   orgs:
     - name: CUNY - Hunter College
-      gpa: 3.634
+      gpa: 3.61
       gradDate: May 2027
       courses:
+        - name: Foundations and Practices of Modern AI Systems (CSCI 49394)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/1591011/general-aoYks
+          semester: 2026 Fall
+        - name: Automation Engineering (CSCI 39531)
+          link: https://github.com/recursion-ninja/Course-2026-09-CSCI-Automation-Engineering
+          semester: 2026 Fall
+        - name: Network Security (CSCI 49375)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/1111341/general-aoYks
+          semester: 2026 Fall
+        - name: Software Engineering (CSCI 405)
+          link: https://khatchad.commons.gc.cuny.edu/teaching/csci-40500-77100-fa-26/
+          semester: 2026 Fall
+        - name: Data Base Management (CSCI 435)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0246071/general-aoYks
+          semester: 2026 Spring
+        - name: Capstone (CSCI 499)
+          link: https://hunter-undergraduate.catalog.cuny.edu/courses/0246431/general-aoYks
+          semester: 2026 Spring
         - name: Data Communications and Networks (CSCI 415)
           link: https://hunter-undergraduate.catalog.cuny.edu/courses/0246061
           semester: 2025 Fall
@@ -242,6 +303,9 @@
           semester: 2023 Fall
     - name: Codepath
       courses:
+        - name: Applications of AI Engineering
+          completion_date: August 2026
+          link: https://www.codepath.org/courses/applied-ai-engineering
         - name: Advanced Technical Interview Prep
           completion_date: August 2024
           link: https://www.codepath.org/courses/tech-interview-prep

@@ -18,7 +18,9 @@ You can also find info about me, such as my projects, skills, and experience, in
     - I'll try to post at least once a month.
     - Occasionally I'll add new features I find interesting + a potential redesign
 - Maintaining my past projects
-- Planning to build something that's low-level (where I can try out Rust)
+- Gaming
+    - Just started playing the Crysis Remastered trilogy
+    - Modded Minecraft (Played modpacks: All The Mods 10+10 TTS, Nomifactory, Space Tech: Integrated)
 - Exploring virtualization, networking, and building my own homelab.
 
 Feel free to reach out using the links below! 
