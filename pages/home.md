@@ -15,9 +15,10 @@ You can also find info about me, such as my projects, skills, and experience, in
 ##### What I'm working on:
 
 - This website
-    - I'll try to post at least once a month.
+    - I'll try to post once a month.
     - Occasionally I'll add new features I find interesting + a potential redesign
-- Maintaining my past projects
+- Maintaining and adding on to my past projects
+- Attending events & hackathons around the NYC area 
 - Gaming
     - Just started playing the Crysis Remastered trilogy
     - Modded Minecraft (Played modpacks: All The Mods 10+10 TTS, Nomifactory, Space Tech: Integrated)
