@@ -117,7 +117,6 @@
         - Spent 10 weeks with one-to-one interviews and conversations with a Google SWE, practicing technical interview problems & learning about software engineering best practices.
         - I learned about various industry topics such as technical interview variants based on company scale/needs, divide & conquer problem solving, async/multithreading/distributed computing, and iterators.
 - category: Projects
-  # misc_projects:
   projects:
     - name: Zig Actions Runner
       sub: Hackathon - AI Engineer NYC 2026
@@ -129,10 +128,9 @@
           url: https://www.mlh.com/events/ai-engineer-nyc-2026/submissions/01a12cc2-f140-5c9c-7753-d3d66fb828b5
       notes:
         - Won the "Best Use of Tiger Data" category!
-        - Built a lightweight, self-hosted GitHub Actions runner in Zig that runs workflow steps as cached Dagger pipelines, reducing repeated job times by 80%.
-        - Won Best Use of Tiger Data at the AI Engineer NYC 2026 Hackathon for building a lightweight, self-hosted GitHub Actions runner in Zig that runs workflow steps as cached Dagger pipelines, reducing repeated job times by 80%.
-        - Designed the Tiger Data (TimescaleDB) schema for runs, jobs, and logs, using time-based partitioning, compression, and data retention policies to store high-volume log data efficiently.
-        - Built a React dashboard in TypeScript that shows each runner's status and its running and finished jobs, with automated tests.
+        - Built a lightweight, self-hosted GitHub Actions runner in Zig and Dagger that is designed to be easily scalable and less CPU-intensive compared to the standard Github Actions runner.
+        - I designed the Tiger Data (TimescaleDB) schema for storing data on runners and the workflow runs and jobs, including logs on past and current runs.
+        - I helped build the frontend React dashboard, which extends the standard Actions tab view by showing each runner's status and their running and finished jobs.        
     - name: Flocksync
       sub: Capstone Project
       skills: Flutter, Firebase, Firestore, Dart, Node.js, OpenStreetMap
@@ -142,10 +140,9 @@
         - name: Site
           url: https://flocksync-dcc08.web.app/
       notes:
-        - WIP
-        - Built a cross-platform rental management application in Flutter to help tenants and property managers centralize communication, maintenance, and property-related workflows.
-        - Implemented Firebase Authentication and Firestore data models for secure account creation, tenant onboarding, role-based access control, and real-time app updates.
-        - Integrated OpenStreetMap APIs for address autocomplete and verification through a Node.js backend, significantly improving property lookup and input accuracy.
+        - Built a cross-platform rental management application in Flutter to help tenants and rental management centralize communication, maintenance, alerts, and other property-related workflows.
+        - I used Firebase Authentication and Firestore to implement account creation and management, which includes onboarding steps for building tenants and managers, and role-based user access control.
+        - I implemented a map view, address autocomplete, and address verification using OpenStreetMap through a Node.js backend, which improved lookup and input accuracy during user onboarding.
     - name: HerRide
       sub: CUNY Tech Prep
       skills: Next.js, Node.js, Supabase, PostgreSQL, Clerk, TypeScript, TailwindCSS  
