@@ -388,7 +388,7 @@ Wow that's probably the longest code we've seen here so far.
 
 This program will run `goodfunction()` and does nothing with our input, except placing it in an array with the `snprintf()` function. We need to instead be able to run `hackedfunction()`. It also outputs the memory addresses of both functions, as well as the address and value of `ptrf`, the function pointer being called.
 
-![Our address and values for variables](narnia_7_test.png)
+![Our address and values for variables](/assets/posts/narnia_7_test.png)
 
 Previously we used `snprintf()` to run a format string attack in Level 5. We can use the same idea in order to change the value of `ptrf` to the memory address of the hacked function, so we will be able to run it. We already have its memory address at 0xffffd2c8, and the value to change it to is 0x804930f (134517519).
 
