@@ -1,0 +1,16 @@
+---
+---
+
+.asset-title .sep {
+  margin: 0 0.35rem;
+  color: var(--secondary-text-color);
+}
+
+.asset-table {
+  td:nth-child(n+2) {
+    white-space: nowrap;
+  }
+  td a {
+    word-break: break-all;
+  }
+}
