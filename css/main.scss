@@ -552,6 +552,60 @@ hr {
 }
 
 /**
+ * Code block header
+ */
+div.highlighter-rouge {
+  margin: 1.5em 0;
+  overflow: hidden;
+  border: 1px solid var(--syntax-border-color);
+  border-radius: 6px;
+  background: var(--syntax-background-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+
+  .highlight {
+    margin: 0;
+  }
+
+  pre {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  // Header bar: language on the left, copy button on the right
+  .code-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    -webkit-user-select: none;
+    padding: 0.35em 1.15em;
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: var(--ctp-overlay);
+    background: color-mix(in srgb, var(--syntax-border-color) 50%, transparent);
+    border-bottom: 1px solid var(--syntax-border-color);
+  }
+
+  .copy-code {
+    padding: 0;
+    font: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--ctp-blue);
+    }
+  }
+}
+
+/**
  * Syntax highlighting styles
  */
 .highlight {
