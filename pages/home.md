@@ -21,7 +21,7 @@ You can also find info about me, such as my projects, skills, and experience, in
 - Attending events & hackathons around the NYC area 
 - Gaming
     - Just started playing the Crysis Remastered trilogy
-    - Modded Minecraft (Played modpacks: All The Mods 10+10 TTS, Nomifactory, Space Tech: Integrated)
+    - Modded Minecraft (Currently playing ATM 9 Expert and NTM:Space)
 - Exploring virtualization, networking, and building my own homelab.
 
 Feel free to reach out using the links below! 
