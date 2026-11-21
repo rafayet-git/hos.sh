@@ -4,14 +4,14 @@
             <a class="navbar-brand" href="/">
                 {% if page.url == '/' %}
                     🏠
+                {% elsif page.url contains '/assets' %}
+                    🗃️
                 {% elsif page.url contains '/posts/' or page.layout == 'post' %}
                     📝
                 {% elsif page.url contains '/tags' %}
                     🏷️
                 {% elsif page.url contains '/timeline' %}
                     📅
-                {% elsif page.url contains '/assets' %}
-                    🗃️
                 {% else %}
                     🌹
                 {% endif %}
