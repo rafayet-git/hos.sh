@@ -19,6 +19,7 @@ themeButton.addEventListener('click', function () {
     el.dataset.theme = next;
     el.dataset.bsTheme = next;
     updateThemeButton();
+    document.dispatchEvent(new Event('themechange'));
   }
 
   // Crossfade
@@ -30,7 +31,6 @@ themeButton.addEventListener('click', function () {
   }
 
   try { localStorage.setItem('theme', next); } catch (e) {}
-  document.dispatchEvent(new Event('themechange'));
 });
 
 // Keep the icon right if the OS theme changes while no preference is saved.
