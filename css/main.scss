@@ -543,23 +543,8 @@ html[data-theme="light"] .navbar .navbar-toggler-icon {
   cursor: pointer;
 }
 
-#theme-toggle .icon-light {
-  display: none;
-}
-
-@mixin theme-toggle-light-icon {
-  .icon-dark { display: none; }
-  .icon-light { display: inline; }
-}
-
-html[data-theme="light"] #theme-toggle {
-  @include theme-toggle-light-icon;
-}
-
-@media (prefers-color-scheme: light) {
-  html:not([data-theme="dark"]) #theme-toggle {
-    @include theme-toggle-light-icon;
-  }
+#theme-toggle svg {
+  display: block;
 }
 
 /**
