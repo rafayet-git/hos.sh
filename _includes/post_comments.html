@@ -1,5 +1,11 @@
 <div id="post-comments"></div>
 <script>
+  function currentTheme() {
+    var explicit = document.documentElement.dataset.theme;
+    if (explicit) return explicit;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
   function loadGiscusComments() {
       var script = document.createElement('script');
       script.src = "https://giscus.app/client.js";
@@ -15,7 +21,7 @@
       script.setAttribute("data-reactions-enabled", "0"); // Looks terrible atm
       script.setAttribute("data-emit-metadata", "0");
       script.setAttribute("data-input-position", "top");
-      script.setAttribute("data-theme", "preferred_color_scheme");
+      script.setAttribute("data-theme", currentTheme());
       script.setAttribute("data-lang", "en");
       script.setAttribute("data-loading", "lazy");
 
@@ -29,6 +35,16 @@
       scriptLoaded = true;
     }
   }
+
+  function syncGiscusTheme() {
+    var frame = document.querySelector('iframe.giscus-frame');
+    if (!frame) return; // not loaded yet
+    frame.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: currentTheme() } } },
+      'https://giscus.app'
+    );
+  }
+  document.addEventListener('themechange', syncGiscusTheme);
 
   setTimeout(loadCommentScriptOnce, 5000);
   window.addEventListener("scroll", loadCommentScriptOnce);

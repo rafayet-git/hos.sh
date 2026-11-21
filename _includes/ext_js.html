@@ -5,40 +5,53 @@
 {% if page.mermaid %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
 <script>
-document.querySelectorAll('div.language-mermaid, pre > code.language-mermaid').forEach(function (el) {
-    var code = el.matches('code') ? el : el.querySelector('code');
-    var pre = el.matches('code') ? el.parentNode : el;
-    var div = document.createElement('div');
-    div.className = 'mermaid';
-    div.textContent = code.textContent;
-    pre.replaceWith(div);
-});
+    document.querySelectorAll('div.language-mermaid, pre > code.language-mermaid').forEach(function (el) {
+        var code = el.matches('code') ? el : el.querySelector('code');
+        var pre = el.matches('code') ? el.parentNode : el;
+        var div = document.createElement('div');
+        div.className = 'mermaid';
+        div.textContent = code.textContent;
+        pre.replaceWith(div);
+    });
 </script>
 <script type="module">
-import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
-var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-mermaid.initialize({
-    startOnLoad: false,
-    theme: dark ? 'dark' : 'default',
-});
-mermaid.run({ querySelector: '.mermaid' });
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs';
+    function isDark() {
+        var explicit = document.documentElement.dataset.theme;
+        return explicit ? explicit === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    }
+    var diagrams = document.querySelectorAll('.mermaid');
+    // SVG replacer
+    diagrams.forEach(function (el) { el.dataset.source = el.textContent; });
+
+    async function render() {
+        mermaid.initialize({ startOnLoad: false, theme: isDark() ? 'dark' : 'default' });
+        diagrams.forEach(function (el) {
+            el.textContent = el.dataset.source;
+            el.removeAttribute('data-processed');
+        });
+        await mermaid.run({ nodes: diagrams });
+    }
+    render();
+    document.addEventListener('themechange', render);
 </script>
 {% endif %}
-
-<script src="/js/code-lang.js"></script>
 
 <!-- MathJax -->
 {% if page.mathjax %}
 <script>
-window.MathJax = {
-    tex: {
-        inlineMath: [['\\(','\\)'], ['$', '$']],
-        displayMath: [['\\[','\\]'], ['$$','$$']],
-    },
-    options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-};
+    window.MathJax = {
+        tex: {
+            inlineMath: [['\\(','\\)'], ['$', '$']],
+            displayMath: [['\\[','\\]'], ['$$','$$']],
+        },
+        options: {
+            skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+        }
+    };
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
+
+<script src="/js/code-lang.js"></script>
+<script src="/js/theme-toggle.js"></script>
