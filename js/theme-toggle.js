@@ -16,10 +16,22 @@ function updateThemeButton() {
 themeButton.addEventListener('click', function () {
   var el = document.documentElement;
   var next = activeTheme() === 'dark' ? 'light' : 'dark';
-  el.dataset.theme = next;
-  el.dataset.bsTheme = next;
+
+  function apply() {
+    el.dataset.theme = next;
+    el.dataset.bsTheme = next;
+    updateThemeButton();
+  }
+
+  // Crossfade
+  var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (document.startViewTransition && !reduceMotion) {
+    document.startViewTransition(apply);
+  } else {
+    apply();
+  }
+
   try { localStorage.setItem('theme', next); } catch (e) {}
-  updateThemeButton();
   document.dispatchEvent(new Event('themechange'));
 });
 
