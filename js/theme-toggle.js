@@ -6,10 +6,8 @@ function activeTheme() {
     (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 }
 
-// Show the icon for the theme you'll switch to: sun while dark, moon while light.
 function updateThemeButton() {
   var dark = activeTheme() === 'dark';
-  themeButton.textContent = dark ? '🌓' : '🌗';
   themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
 }
 

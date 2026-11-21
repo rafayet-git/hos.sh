@@ -323,10 +323,12 @@ summary::marker {
     color: var(--text-color) !important;
     line-height: $base-line-height;
 
-    &:hover {
-      color: var(--text-color) !important;
-      opacity: 0.5;
-      text-decoration: none;
+    @media (hover: hover) {
+      &:hover {
+        color: var(--text-color) !important;
+        opacity: 0.5;
+        text-decoration: none;
+      }
     }
   }
 
@@ -539,6 +541,25 @@ html[data-theme="light"] .navbar .navbar-toggler-icon {
   padding: 0.5rem;
   line-height: 1;
   cursor: pointer;
+}
+
+#theme-toggle .icon-light {
+  display: none;
+}
+
+@mixin theme-toggle-light-icon {
+  .icon-dark { display: none; }
+  .icon-light { display: inline; }
+}
+
+html[data-theme="light"] #theme-toggle {
+  @include theme-toggle-light-icon;
+}
+
+@media (prefers-color-scheme: light) {
+  html:not([data-theme="dark"]) #theme-toggle {
+    @include theme-toggle-light-icon;
+  }
 }
 
 /**
