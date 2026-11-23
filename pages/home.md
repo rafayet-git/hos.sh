@@ -8,7 +8,7 @@ permalink: /
 
 Hello! I am Rafayet, a Computer Science student in CUNY Hunter College.
 
-I use this site to document my work, ideas, and opinions related to technology. I like to talk about what I've done in the past, show what I'm working/planning on (such as for a project or trying to improve my workflow), or sometimes discuss issues that I've faced. My go-to topics include programming, cybersecurity, and web development.
+I use this site to document my work, ideas, and opinions related to technology. I like to talk about what I've done in the past, show what I'm working/planning on (such as for a project or trying to improve my workflow), or sometimes discuss issues that I've faced.
 
 You can also find info about me, such as my projects, skills, and experience, in my [About](/about) page.
 
