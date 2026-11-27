@@ -20,8 +20,8 @@ content:
       - { name: title, label: Title, type: string }
       - { name: date, label: Publish Date, type: date, options: { format: yyyy-MM-dd } }
       - { name: tags, label: Tags, type: string, required: false, description: Separate by spaces }
-      # - { name: mathjax, label: Enable MathJax, type: boolean, required: false, default: false }
-      # - { name: mermaid, label: Enable Mermaid, type: boolean, required: false, default: false }
+      - { name: mathjax, label: Enable MathJax, type: boolean, required: false, default: false }
+      - { name: mermaid, label: Enable Mermaid, type: boolean, required: false, default: false }
       - { name: body, label: Body, type: rich-text }
 
   - name: pages
@@ -41,6 +41,6 @@ content:
           values: [default, page]
       - { name: title, label: Title, type: string }
       - { name: permalink, label: Permalink, type: string }
-      # - { name: mathjax, label: Enable MathJax, type: boolean, required: false, default: false }
-      # - { name: mermaid, label: Enable Mermaid, type: boolean, required: false, default: false }
+      - { name: mathjax, label: Enable MathJax, type: boolean, required: false, default: false }
+      - { name: mermaid, label: Enable Mermaid, type: boolean, required: false, default: false }
       - { name: body, label: Body, type: rich-text }
