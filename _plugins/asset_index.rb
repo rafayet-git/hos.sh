@@ -1,4 +1,7 @@
-# Generates an "open directory" style index page for /assets/ and subfolders (e.g. /assets/posts/, /assets/projects/).
+# Generates an "open directory" style index page for /assets/ and subfolders.
+require "open3"
+require "time"
+
 module AssetIndex
   ROOT = "assets".freeze
 
@@ -8,6 +11,7 @@ module AssetIndex
 
     def generate(site)
       files = site.static_files.select { |f| f.relative_path.start_with?("/#{ROOT}/") }
+      git_dates = git_modified_dates(site.source)
       dirs = { ROOT => { files: [], dirs: [] } }
 
       files.each do |f|
@@ -40,7 +44,7 @@ module AssetIndex
           { "name" => f.name, "url" => f.relative_path.gsub(" ", "%20"),
             "ext" => f.extname.delete(".").downcase,
             "size" => f.respond_to?(:path) && File.exist?(f.path) ? File.size(f.path) : 0,
-            "modified" => f.modified_time.strftime("%Y-%m-%d %H:%M") }
+            "modified" => git_dates[f.relative_path.sub(%r{\A/}, "")] || "-" }
         end
         page.content = ""
         site.pages << page
@@ -48,6 +52,28 @@ module AssetIndex
     end
 
     private
+
+    def git_modified_dates(source)
+      output, status = Open3.capture2e(
+        "git", "-C", source, "log", "--format=%cI", "--name-only", "--", ROOT
+      )
+      unless status.success?
+        raise Jekyll::Errors::FatalException,
+          "Could not read Git history for #{ROOT}: #{output.strip}"
+      end
+
+      dates = {}
+      current_date = nil
+      output.each_line do |line|
+        line = line.chomp
+        if line.match?(/\A\d{4}-\d{2}-\d{2}T/)
+          current_date = Time.iso8601(line).strftime("%Y-%m-%d %H:%M")
+        elsif line.start_with?("#{ROOT}/")
+          dates[line] ||= current_date
+        end
+      end
+      dates
+    end
 
     def crumbs(dir)
       parts = dir.split("/")
