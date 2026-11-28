@@ -53,7 +53,7 @@ There's a few things that I've noticed from this code:
 
 The only way we can change the value is by changing the buffer beyond the 20 bytes it's allocated towards. Since buffer is 20 bytes and the input allows us to write up to 24, we can write past the buffer in order to change the bytes allocated towards val. This is commonly known as a buffer overflow attack. You can see this for yourself by using an input with size 21, as the value changes to something other than 0x41414141.
 
-![Graph of how we can visualize the buffer](/assets/posts/narnia_0_buffer.png)
+![Graph of how we can visualize the buffer](/assets/posts/overthewire-narnia/narnia_0_buffer.png)
 
 We can do this by filling the first 20 letters with any random value, then filling the last 4 bytes with 0xdeadbeef. Note that because this is an x86 machine, bits are little-endian, so we have to reverse our byte order for those 4 bytes. This is as simple as separating it into 0xef, 0xbe, 0xad, then 0xde.
 
@@ -126,7 +126,7 @@ This one seems similar with level 0, with a potential buffer overflow attack on 
 
 As a test, I ran the program with various string sizes. I have noticed that, with a string of 132 characters, the program segfaults.
 
-![Segfault at 132 chars](/assets/posts/narnia_2_segfault.png)
+![Segfault at 132 chars](/assets/posts/overthewire-narnia/narnia_2_segfault.png)
 
 From what I can understand about assembly, after we go past the `main()` variables (which are the 128 chars in the array), the 4 bytes after that hold some kind of frame pointer or padding (which aren't immediately or fully used, hence the program not crashing on 131 chars), and the 4 bytes right after hold the return address. The return address will be useful here because it'll tell the program where to jump in memory after executing main. So in total, we need to have 136 characters in our input argument.
 
@@ -136,7 +136,7 @@ To find the last 4 bytes for our return memory address, we need to use a debug p
 
 You should keep pressing enter until you find the correct part of memory, which you can tell by seeing a blob of the same hex values (in particular, 0x71 as it is the hex code for the letter q). The address closest to the middle should be the return address, to give it a good enough range so we can re-run the program. I chose 0xffffd540. Just like in the first level, the characters will be in reverse order.
 
-![The memory dump](/assets/posts/narnia_2_mem.png)
+![The memory dump](/assets/posts/overthewire-narnia/narnia_2_mem.png)
 
 Now that we have all the parts needed, we can put it together in one line like so:
 
@@ -175,13 +175,13 @@ In this level we have to manage files by giving it a file to read from `ifile`, 
 
 As a test, I ran the program with various input sizes to see if the error messages change.
 
-![Overflow test](/assets/posts/narnia_3_error.png)
+![Overflow test](/assets/posts/overthewire-narnia/narnia_3_error.png)
 
 At less than 32 characters, it will print out the input file it fails to access. At 32 or more, however, it will print out the failed output file, since it overwrites the `/dev/null` it was set to by default.
 
 However, there is another caveat with doing a buffer overflow on two strings like this. Since strings in C are null-terminated (they end as soon as a 0x00 character is found), the actual filename put into `ifile` will keep going past `ofile`, including it in the end of it's string. So that means we have to somewhat share filenames with the two.
 
-![How variables will look like](/assets/posts/narnia_3_files.png)
+![How variables will look like](/assets/posts/overthewire-narnia/narnia_3_files.png)
 
 I decided to create a subdirectory on `/tmp/`, with a name that is 32 minus 5 characters long, because it's the best way we can create two files with the same name, which we can use for both the input file and output file.
 
@@ -388,7 +388,7 @@ Wow that's probably the longest code we've seen here so far.
 
 This program will run `goodfunction()` and does nothing with our input, except placing it in an array with the `snprintf()` function. We need to instead be able to run `hackedfunction()`. It also outputs the memory addresses of both functions, as well as the address and value of `ptrf`, the function pointer being called.
 
-![Our address and values for variables](/assets/posts/narnia_7_test.png)
+![Our address and values for variables](/assets/posts/overthewire-narnia/narnia_7_test.png)
 
 Previously we used `snprintf()` to run a format string attack in Level 5. We can use the same idea in order to change the value of `ptrf` to the memory address of the hacked function, so we will be able to run it. We already have its memory address at 0xffffd2c8, and the value to change it to is 0x804930f (134517519).
 
@@ -432,11 +432,11 @@ To do this, we need to examine the stack memory when `func()` is being called, a
 
 Run `disass func` to visualize the assembly code, then `b *func+<NUM>` to set the breakpoint. I set it to 110.
 
-![GDB breakpoint](/assets/posts/narnia_8_bp.png)
+![GDB breakpoint](/assets/posts/overthewire-narnia/narnia_8_bp.png)
 
 With that set up, we can test the program with input of various length. Here's one that I ran with `r hello`, then got the memory by doing `x/16xw $esp`:
 
-![Memory addresses](/assets/posts/narnia_8_mem.png)
+![Memory addresses](/assets/posts/overthewire-narnia/narnia_8_mem.png)
 
 I've highlighted above the values for our input that is held by `blah`. You can tell by the trail of zeroes that were memsetted beforehand. We do not need to worry about the 2nd value, but it can be useful for debugging. As you might notice, the value changes depending on how long our argument is, so we need to decrease it as we add more letters to it.
 
@@ -458,7 +458,7 @@ And finally, we can append the entire shellcode to the back of our input. This i
 
 If we run it, we will be able to get the shell, however GDB is preventing us from accessing as the next user. We need to exit it and... damn. We need to re-calculate the memory values again. To do this we can use the `xxd` command to examine the values that get printed out if we overflow the buffer to 20 characters:
 
-![Memory addresses without gdb](/assets/posts/narnia_8_xxd.png)
+![Memory addresses without gdb](/assets/posts/overthewire-narnia/narnia_8_xxd.png)
 
 Great, we've got the address at 0xffffd581. Now we'd need to adjust it and the return address to the rest of our input size. You can do this part yourself :)
 

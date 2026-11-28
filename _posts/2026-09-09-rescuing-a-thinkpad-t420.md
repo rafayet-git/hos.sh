@@ -10,8 +10,8 @@ A few months ago, I decided to take on the challenge of rescuing an old laptop f
 I found an eBay listing that listed a ThinkPad T420 for sale, from a private charter school that upgraded their fleet of laptops. It listed multiple for sale, so I couldn't get accurate images of the actual laptop, but they did say that it functions and that it included a charger. The specs included an Intel i5-2520M, 4 gigabytes of DDR3, and a 320 gigabyte hard drive. I ended up paying $84 including shipping and fees for this thing.
 
 <div style="display: flex; gap: 12px;">
-    <img src="/assets/posts/t420_0.jpg" alt="The final result" style="width: 50%;">
-    <img src="/assets/posts/t420_10.jpg" alt="The lamp's brighter than my future" style="width: 50%;">
+    <img src="/assets/posts/rescuing-a-thinkpad-t420/t420_0.jpg" alt="The final result" style="width: 50%;">
+    <img src="/assets/posts/rescuing-a-thinkpad-t420/t420_10.jpg" alt="The lamp's brighter than my future" style="width: 50%;">
 </div>
 
 ### First Impressions
@@ -36,7 +36,7 @@ Looking for battery upgrades online, I noticed that I could easily buy an upgrad
 
 I can't tell how much of an improvement they are compared to the standard 6-cell battery that came with this laptop, but so far it works and I have about 7-10 hours of battery life according to Windows. The battery bulges out the back (to make space for the extra 3 cells), which I actually really like, because it doubles as a grip when I want to use the ThinkPad while standing. I can just rest the ThinkPad one-handed against my forearm like this:
 
-![Look at the clean lid](/assets/posts/t420_7.jpg)
+![Look at the clean lid](/assets/posts/rescuing-a-thinkpad-t420/t420_7.jpg)
 
 It could also work as a carry handle, though I don't totally trust the battery's hinge strength to keep holding onto the ThinkPad for long periods of time.
 
@@ -61,11 +61,11 @@ For the installation, I needed to disassemble the ThinkPad. The first few steps 
 
 Now with the install, I had to tape the converter board to the lid, so that it would sit behind the screen itself. Putting the correct cables in place was easy, though I was a bit concerned with the cables or the board causing the screen to bend or snap. Installing the screen itself felt a bit tight, especially with the stuff behind it. Once it was done, I tested if it displayed correctly by plugging it in, and it sure does work! 
 
-![Installing the converter board](/assets/posts/t420_11.jpg)
+![Installing the converter board](/assets/posts/rescuing-a-thinkpad-t420/t420_11.jpg)
 
 However, the aforementioned issue with the screen bending did exist, causing these white halo effects to appear. It's not THAT bad, and I barely notice it unless if I'm on a dark area and the screen is blank. But as you can see, if both of these are true then you can really see it.
 
-![The angels are trying to take the laptop away from me](/assets/posts/t420_2.jpg)
+![The angels are trying to take the laptop away from me](/assets/posts/rescuing-a-thinkpad-t420/t420_2.jpg)
 
 The installed screen is much better than the old one. It's a modern IPS screen at 1080p, so it's the same stuff that most new laptops already have. Plus, it's got a 3-year warranty that I might never get the chance to test. In my opinion you should consider getting an upgrade kit with longer cables, so that you can maybe put it behind the keyboard (under the RAM slot) and not have to deal with the halo effect.
 
@@ -83,7 +83,7 @@ I ordered a second keyboard from a different seller, this time they sent me a us
 
 I decided to order [this keyboard](https://www.ebay.com/itm/132891986188) from a different seller for $33. It too wasn't OEM, and it had the same white lining like the first keyboard. This time, there was no weird green button, and the keyboard was clean, worked properly, and actually fit my ThinkPad! Performance-wise, the only con I found was that the trackpoint feels stuttery compared to the OEM keyboard, but it was still usable, and the keys feel the exact same. 
 
-![It looks alright](/assets/posts/t420_1.jpg)
+![It looks alright](/assets/posts/rescuing-a-thinkpad-t420/t420_1.jpg)
 
 Part of the infuriating process is that you are basically rolling a dice when it comes to buying a non-OEM keyboard, especially if you want something that feels freshly new. If you don't want to deal with this hassle, the next best option is to just buy an OEM keyboard, that is if you're fine paying upwards of $50 for one, and that you're fine with a used keyboard that has a bunch of shiny keys with it.
 
@@ -105,7 +105,7 @@ The only problem with this approach is that I cannot use the caddy as a boot dri
 
 Another thing I noticed was that there's a small locking lever next to the drive. This came broken with my ThinkPad as it just moves freely without staying in place. From what I heard, this seems to be a common problem with an internal spring falling off. I did find replacement parts out there, but I never bothered to fully fix it, so that's something you might want to check out.
 
-![The locking lever](/assets/posts/t420_9.jpg)
+![The locking lever](/assets/posts/rescuing-a-thinkpad-t420/t420_9.jpg)
 
 ### Upgrade 5: Coreboot
 
@@ -117,7 +117,7 @@ In order to get past all of these blocks, we'll need to change the stock BIOS to
 
 This process is going to be tedious as it can't be done with just a program like our BIOS update from before. We'll need to flash it physically with special hardware and with a borrowed laptop running Linux. It will also require a **complete disassembly** of the ThinkPad, so make sure you have ample desk space to store its parts!
 
-![Holy christ there's nothing left](/assets/posts/t420_3.jpg)
+![Holy christ there's nothing left](/assets/posts/rescuing-a-thinkpad-t420/t420_3.jpg)
 
 ***
 
@@ -129,7 +129,7 @@ Here's a list of stuff that I needed to get:
 
 After the disassembly, I plugged in the flash programmer to my working laptop, and on it I attached one of those "dual-use boards" and the 8 cables onto it. The reason I did it this way (instead of just directly to a female-to-female cable) was that I was having placement issues, and the board was somewhat useful as a guide. I would also recommend grouping the cables by 4 instead of having eight separate cables to manually manage. 
 
-![Flashing the BIOS](/assets/posts/t420_4.jpg)
+![Flashing the BIOS](/assets/posts/rescuing-a-thinkpad-t420/t420_4.jpg)
 
 As you can see from this image, I had to flip the motherboard and place the pins to the leftmost holes. From the flash programmer, I started with the back (left from the USB side) row of cables, flipped it, and then put it to the front row of the holes, and then did the same thing with the second row of cables. This made the flashing process a lot easier than how others normally do it, and I never needed to solder nor did I encounter errors or issues during the flashing or backup process.
 
@@ -167,7 +167,7 @@ cd ../..
 make nconfig
 ```
 
-Within the configuration screen, there's a bunch of things we need to set. To make things simple I'll just include the <a href="/assets/posts/t420.config" download=".config">.config file</a> that you need to put on the coreboot directory. You should still check over the options.
+Within the configuration screen, there's a bunch of things we need to set. To make things simple I'll just include the <a href="/assets/posts/rescuing-a-thinkpad-t420/t420.config" download=".config">.config file</a> that you need to put on the coreboot directory. You should still check over the options.
 
 ```bash
 make crossgcc-i386 CPUS=$(nproc)
@@ -203,7 +203,7 @@ I also decided to replace the CPU cooler because it was always running super hot
 
 Instead of an exact replacement, I got [one](https://www.ebay.com/itm/127137877285) for $36 that was made for the iGPU variant of the ThinkPad. The difference here is that it contains an extra copper pipe that would typically cool a graphics chip that came with some ThinkPad T420s, which I don't have. Instead we'll fuse the three copper pipes with some [copper tape](https://www.amazon.com/dp/B09Z6F9RFG). Just 3 or 4 layers is probably enough, though I might have gone a bit more than that. Either way I had to make sure it was compacted and that it would actually fit. I then put a layer of [kapton tape](https://www.amazon.com/dp/B0) around the area to make sure that it doesn't short-circuit. Oh, and I also used the same tape to keep the cables organized inside the ThinkPad. 
 
-![Cool fan](/assets/posts/t420_5.jpg)
+![Cool fan](/assets/posts/rescuing-a-thinkpad-t420/t420_5.jpg)
 
 This setup definitely helped with performance and cooling with the new CPU. Despite running at 15 watts extra, this thing runs at around 40-50C at idle, and in the mid-80s at full throttle during stress testing.
 
@@ -215,7 +215,7 @@ The RAM kit I bought was a Crucial 2x8GB kit in DDR3L-1866 SODIMM. It was the ch
 
 In theory, with me using Coreboot, I should be able to use the faster RAM speeds at 1866MHz instead of the stock 1600MHz. However, this never worked for me, and it was just stuck at 1600MHz. That's when I realized that the ThinkPad doesn't fully support DDR3L RAM, as the RAM expects it to run at 1.35 volts for the full speed, but the ThinkPad is always supplying it with 1.5 volts with no way to change it. I didn't think it was too big of a deal for me to return it, since it still worked fine and Memtest86 showed the RAM is functioning fine; it's just that it will run slightly slower. 
 
-![Memtest results pass](/assets/posts/t420_6.jpg)
+![Memtest results pass](/assets/posts/rescuing-a-thinkpad-t420/t420_6.jpg)
 
 Long story short, just try to avoid DDR3L RAM if you can, instead try finding DDR3-1866 SODIMMs to put on your ThinkPad.
 
@@ -239,7 +239,7 @@ Since it was [only $12](https://www.amazon.com/dp/B0D6R955S7), I decided to bite
 
 To install it, I pushed onto the empty Expresscard cover which caused it to pop open. That way I could just pop in the USB card. What I immediately liked was that the USB ports were flush to the laptop, so it doesn't take extra space unlike the other Expresscard accessories. The only problem with this is that you might have issues fitting both USB devices at once.
 
-![I might've almost cut my finger with this](/assets/posts/t420_12.jpg)
+![I might've almost cut my finger with this](/assets/posts/rescuing-a-thinkpad-t420/t420_12.jpg)
 
 With Linux Mint it worked out of the box. I can't attest to the transfer speed, but I was able to flash a Linux distro on it and it was pretty fast. I was even able to boot from it, so that's one fear gone. It also worked on Windows but I needed to install a driver update first.
 
@@ -276,4 +276,4 @@ Either way, this doesn't change how I feel about my ThinkPad T420 and ThinkPads 
 
 Thank you for reading this long post, and I hope that it helped you with your own ThinkPad journey, or at least found it informative. Since you made it this far, you can have this Windows 7 product key that I found hidden under the battery.
 
-![Super secret... Oh whatever you could have pirated it anyway](/assets/posts/t420_8.jpg)
+![Super secret... Oh whatever you could have pirated it anyway](/assets/posts/rescuing-a-thinkpad-t420/t420_8.jpg)
